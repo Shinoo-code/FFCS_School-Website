@@ -1,0 +1,195 @@
+/* policy-common.css - Ensure this is the version you intend to use */
+:root {
+    --kinderly-bg: #fffdf6; /* From enrollment.css */
+    --kinderly-text: #0a0a23; /* From enrollment.css */
+    --kinderly-primary-green: #00b44f; /* From enrollment.css */
+    --kinderly-accent-yellow: #ffc843; /* From enrollment.css */
+    --kinderly-form-highlight: #001f54; /* From enrollment.css */
+    --kinderly-button-bg: #00c853; /* From enrollment.css */
+    --kinderly-button-text: #ffffff; /* From enrollment.css */
+    --kinderly-light-accent-bg: #f7fbff; /* From enrollment.css */
+    --kinderly-border-color: #d0d9e8; /* From enrollment.css */
+    --header-height: 0px; /* MODIFIED: Set to 0px as there's no fixed MAIN navbar */
+}
+
+html {
+    font-size: 100%; /* Base font size increased */
+    scroll-behavior: smooth;
+}
+
+body { /* Removed padding-top as there's no fixed main navbar */
+    font-family: 'Poppins';
+    background-color: var(--kinderly-bg, #fdfcf6);
+    color: var(--kinderly-text, #333);
+    line-height: 1.7;
+    margin: 0;
+    /* padding-top: var(--header-height); REMOVED THIS */
+}
+
+.policy-header { /* This is the colored header specific to policy pages */
+    background-color: var(--kinderly-primary-green, #00b44f);
+    color: var(--kinderly-button-text, white);
+    padding: 3rem 1rem 3rem 1rem; /* Adjusted padding slightly */
+    text-align: center;
+    margin-bottom: 2.5rem; /* Increased margin for better separation */
+    position: relative;
+    overflow: hidden;
+}
+
+.policy-header::before {
+    content: '';
+    position: absolute;
+    bottom: -40px; /* Adjusted for visual effect */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%; /* Adjusted for visual effect */
+    height: 80px;  /* Adjusted for visual effect */
+    background-color: var(--kinderly-bg, #fdfcf6);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.policy-header h1 {
+    font-weight: 700;
+    font-size: 2.25rem; /* Slightly adjusted */
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+.policy-header p {
+    font-size: 1.05rem; /* Slightly adjusted */
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+    max-width: 600px; /* Constrain subtitle width for better readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.policy-container { /* This is the white box for the text content */
+    max-width: 850px; /* Readable width */
+    margin: 0 auto 3rem auto;
+    padding: 2.5rem; /* Increased padding */
+    background-color: var(--kinderly-light-accent-bg, #ffffff); /* Use a light bg or white */
+    border-radius: 10px; /* Softer radius */
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07); /* Softer shadow */
+    border: 1px solid var(--kinderly-border-color, #e0e0e0);
+}
+
+.policy-section {
+    margin-bottom: 2.25rem; /* Adjusted spacing */
+    padding-bottom: 1.25rem; /* Adjusted spacing */
+    border-bottom: 1px dashed var(--kinderly-border-color, #eee);
+}
+
+.policy-section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.policy-section h2 {
+    color: var(--kinderly-form-highlight, #001f54);
+    font-size: 1.6rem; /* Adjusted size */
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--kinderly-accent-yellow, #ffc843);
+    display: inline-block;
+}
+
+.policy-section h3 {
+    color: var(--kinderly-primary-green, #00b44f);
+    font-size: 1.2rem; /* Adjusted size */
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.policy-section p,
+.policy-section ul,
+.policy-section ol {
+    margin-bottom: 1rem;
+    font-size: 0.95rem; /* Standard text size */
+    color: var(--kinderly-text, #0a0a23); /* Main text color */
+}
+
+.policy-section ul,
+.policy-section ol {
+    padding-left: 1.8rem;
+}
+
+.policy-section ul li,
+.policy-section ol li {
+    margin-bottom: 0.5rem;
+}
+
+.policy-section strong {
+    color: var(--kinderly-text, #0a0a23); /* Ensure strong stands out */
+    font-weight: 600;
+}
+
+.policy-section a {
+    color: var(--kinderly-primary-green, #00b44f);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.policy-section a:hover {
+    color: var(--kinderly-form-highlight, #001f54); /* Darker on hover */
+}
+
+.back-home-btn-container {
+    text-align: center;
+    margin-top: 2.5rem; /* Increased space above button */
+    padding-bottom: 2.5rem; /* Increased space below button */
+}
+
+.btn-back-home {
+    background-color: var(--kinderly-button-bg, #00c853);
+    color: var(--kinderly-button-text, white);
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px; /* Pill shape */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+}
+
+.btn-back-home:hover {
+    background-color: #00a040; /* Darker shade of kinderly-button-bg */
+    color: var(--kinderly-button-text, white);
+    transform: translateY(-2px);
+}
+
+.btn-back-home i {
+    margin-right: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .policy-header {
+        padding: 2rem 1rem 2rem 1rem;
+    }
+    .policy-header h1 {
+        font-size: 1.8rem;
+    }
+    .policy-header p {
+        font-size: 0.95rem;
+    }
+    .policy-container {
+        padding: 1.5rem;
+        margin: 0 1rem 2rem 1rem; /* Edge margin for small screens */
+    }
+    .policy-section h2 {
+        font-size: 1.4rem;
+    }
+    .policy-section p,
+    .policy-section ul,
+    .policy-section ol {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,272 @@
+/* ==================================
+   Base Styles (Adapted for Payments Page)
+   ================================== */
+:root {
+    --primary-blue: #0000CD;
+    --secondary-red: #FF0000; /* For delete/unapprove */
+    --accent-yellow: #FFD700;
+    --accent-green: #228B22; /* For approve */
+    --white: #FFFFFF;
+    --light-blue: #E6E6FF; /* Table header */
+    --light-yellow: #FFFBE6; /* Row hover */
+    --gray: #f5f5f5; /* Page background */
+    --dark-gray: #444;
+    --medium-gray: #ddd;
+    --status-approved-bg: #e6f7f0;
+    --status-approved-text: #155724;
+    --status-pending-bg: #fff8e1; /* Light yellow for pending */
+    --status-pending-text: #a05200; /* Darker yellow for pending text */
+    --status-declined-bg: #f8d7da; /* For declined payment status */
+    --status-declined-text: #721c24; /* For declined payment status text */
+}
+
+html { font-size: 100%; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--gray);
+  padding: 20px;
+  color: var(--dark-gray);
+  margin: 0;
+}
+
+.page-container {
+  max-width: 1200px; /* Wider for payment tables */
+  margin: 20px auto;
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.page-container:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.page-title {
+  text-align: center;
+  color: var(--primary-blue);
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  position: relative;
+  padding-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+.page-title::after {
+    content: ''; position: absolute; bottom: 0; left: 50%;
+    transform: translateX(-50%); width: 110px; height: 4px;
+    background-color: var(--accent-yellow);
+    border-radius: 2px;
+}
+
+/* Alerts (Bootstrap classes handle most styling) */
+.alert-success {
+    background-color: var(--status-approved-bg); color: var(--status-approved-text);
+    border: 1px solid var(--accent-green);
+}
+.alert-danger {
+    background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb;
+}
+.alert { /* Common alert styling */
+    border-radius: 5px; font-weight: bold; padding: 12px 18px;
+    margin-bottom: 20px; text-align: center;
+}
+
+/* Card Styling (For Student Financial Status) */
+.card {
+    background-color: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.card-header {
+    padding: 16px 20px;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 205, 0.03);
+    border-bottom: 2px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-header h5 {
+    font-size: 1.15rem;
+    color: var(--primary-blue);
+    font-weight: 700;
+    margin: 0;
+}
+.card-body {
+    padding: 16px;
+}
+
+/* Table Styles */
+.table-responsive { margin-top: 18px; }
+.feedback-table {
+  width: 100%; border-collapse: collapse; margin-top: 10px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+.feedback-table th, .feedback-table td {
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid #f0f0f0;
+}
+.feedback-table th:first-child, .feedback-table td:first-child { padding-left: 14px; }
+.feedback-table th:last-child, .feedback-table td:last-child { padding-right: 14px; }
+
+/* Table header specific styling */
+.feedback-table thead th {
+  background-color: var(--light-blue);
+  color: var(--primary-blue);
+  font-weight: 700;
+  border-bottom: 2px solid #ccc;
+}
+.feedback-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+.feedback-table tbody tr:hover {
+  background-color: var(--light-yellow);
+}
+
+/* Status Labels (Used in Payment History) */
+.status-label {
+    padding: 5px 10px; 
+    font-size: 0.8em; 
+    font-weight: 700;
+    border-radius: 12px; 
+    text-transform: capitalize;
+    display: inline-block;
+}
+.status-approved { background-color: var(--status-approved-bg); color: var(--status-approved-text); }
+.status-pending { background-color: var(--status-pending-bg); color: var(--status-pending-text); }
+.status-declined { background-color: var(--status-declined-bg); color: var(--status-declined-text); }
+
+
+/* Action Buttons */
+.action-buttons-group { display: flex; gap: 6px; justify-content: center; }
+.action-buttons-group .btn { 
+    font-size: 0.8rem; 
+    padding: 6px 11px; 
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+.action-buttons-group .btn:hover {
+    transform: translateY(-1px);
+}
+
+/* Back Button */
+.back-container { text-align: center; margin-top: 30px; }
+.btn-back {
+  display: inline-block; 
+  background-color: var(--dark-gray); 
+  color: var(--white);
+  padding: 11px 22px; 
+  text-decoration: none; 
+  border-radius: 7px;
+  font-weight: 600; 
+  transition: all 0.3s ease; 
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.btn-back:hover { 
+    background-color: #333; 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    color: var(--white);
+}
+.btn-back i { margin-right: 8px; }
+
+/* ==================================
+   Payment Page Specific Styles
+   ================================== */
+.filter-buttons { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.filter-buttons .btn { 
+    margin-right: 0;
+    margin-bottom: 0;
+    border-radius: 7px;
+    font-weight: 600;
+    padding: 8px 14px;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+.filter-buttons .btn.active {
+    box-shadow: 0 2px 8px rgba(0, 0, 205, 0.2);
+}
+
+/* Financial Status Colors (Applied to SPAN now) */
+.status-paid { color: #10b981; font-weight: 700; } /* Green */
+.status-balance { color: #ef4444; font-weight: 700; } /* Red */
+.status-no-payment { color: #f59e0b; font-weight: 700; } /* Amber */
+
+/* Search Input */
+.search-container { margin-bottom: 18px; max-width: 450px; }
+.search-container .form-label { font-weight: 600; color: #555; margin-bottom: 6px; }
+.search-input {
+    width: 100%; 
+    padding: 9px 12px; 
+    border: 1.5px solid #ddd;
+    border-radius: 7px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+.search-input:focus {
+     border-color: var(--primary-blue); 
+     outline: 0;
+     box-shadow: 0 0 0 3px rgba(0, 0, 205, 0.1);
+     background-color: #fafbff;
+}
+/* No Results Row */
+.no-results-row td {
+    text-align: center; font-style: italic; color: #6c757d; padding: 1rem;
+}
+
+/* Print Title (Hidden by default) */
+.print-title { display: none; }
+
+/* --- PRINT STYLES --- */
+@media print {
+    body * { visibility: hidden; }
+    .printable-area, .printable-area * { visibility: visible; }
+    .printable-area {
+        position: absolute; left: 0; top: 0; width: 100%; margin: 0; padding: 15px;
+    }
+    .page-container { box-shadow: none; border: none; padding: 0;}
+    .card { box-shadow: none; border: none;}
+
+    #payment-history-table {
+        font-size: 9pt; width: 100%; border-collapse: collapse; margin-top: 0;
+    }
+    #payment-history-table th, #payment-history-table td {
+        border: 1px solid #dee2e6; padding: 4px 6px;
+        white-space: normal; word-wrap: break-word;
+    }
+     #payment-history-table th {
+        background-color: #e9ecef !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        font-weight: bold; color: #000;
+     }
+    #payment-history-table .actions-col,
+    #payment-history-table .proof-col { display: none; }
+    #payment-history-table tr[style*="display: none"] { display: none !important; }
+
+    .print-title {
+         display: block; text-align: center; font-size: 14pt;
+         font-weight: bold; margin-bottom: 10px; visibility: visible;
+         color: #000;
+     }
+     /* Hide non-printable elements */
+     .search-container, .card.mb-5, .back-container, .alert, .page-title,
+     #payment-history-section .d-flex.justify-content-between {
+         display: none !important;
+     }
+}

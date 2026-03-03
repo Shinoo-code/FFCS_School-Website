@@ -1,0 +1,183 @@
+/* Refined: School Website 1/css/manage_welcome.css */
+:root {
+    --primary-blue: #0000CD;
+    --accent-yellow: #FFD700;
+    --accent-green: #228B22;
+    --white: #FFFFFF;
+    --gray: #f5f5f5;
+    --dark-gray: #444;
+    --medium-gray: #ddd;
+    --status-enrolled-bg: #e6f7f0;
+    --status-enrolled-text: #155724;
+    --status-enrolled-dot: #28a745;
+    --status-declined-bg: #f8d7da;
+    --status-declined-text: #721c24;
+    --status-declined-dot: #dc3545;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+  background-color: var(--gray);
+  font-family: 'Poppins';
+  padding: 20px;
+  color: var(--dark-gray);
+  margin: 0;
+}
+
+.manage-welcome-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 28px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.manage-welcome-container:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.manage-welcome-container h3 {
+  font-size: 1.95rem;
+  margin-bottom: 28px;
+  font-weight: 700;
+  color: var(--primary-blue);
+  text-align: center;
+  position: relative;
+  padding-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+.manage-welcome-container h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 4px;
+    background-color: var(--accent-yellow);
+    border-radius: 2px;
+}
+
+.manage-welcome-container label {
+  font-weight: 600;
+  color: var(--primary-blue);
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  letter-spacing: -0.2px;
+}
+
+.manage-welcome-container input[type="text"],
+.manage-welcome-container textarea,
+.manage-welcome-container input[type="file"].form-control { /* Added file input */
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 8px;
+  border: 1.5px solid #ddd;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  background-color: var(--white);
+  transition: all 0.3s ease;
+}
+.manage-welcome-container input[type="text"]:focus,
+.manage-welcome-container textarea:focus,
+.manage-welcome-container input[type="file"].form-control:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(0, 0, 205, 0.1);
+  outline: none;
+  background-color: rgba(0, 0, 205, 0.02);
+}
+.manage-welcome-container textarea {
+    min-height: 100px; /* Good default height */
+    resize: vertical;
+}
+.manage-welcome-container input[type="file"].form-control {
+    padding: 8px 10px; /* Specific padding for file input if needed */
+}
+
+.manage-welcome-container img { /* Image preview */
+  max-width: 200px;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 5px; /* Space above image */
+  margin-bottom: 15px; /* Space below image */
+  border: 1px solid var(--medium-gray);
+  padding: 4px;
+  display: block; /* For margin auto centering if needed */
+}
+
+.manage-welcome-container .btn, /* Submit button */
+.manage-welcome-container button[type="submit"] {
+  background-color: var(--accent-green);
+  border: none;
+  padding: 11px 28px;
+  font-weight: 600;
+  color: var(--white);
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 0.95rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  box-shadow: 0 3px 10px rgba(34, 139, 34, 0.3);
+}
+.manage-welcome-container .btn:hover,
+.manage-welcome-container button[type="submit"]:hover {
+  background-color: #1a6d1a;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(34, 139, 34, 0.4);
+}
+
+.success-msg {
+  background-color: var(--status-enrolled-bg);
+  color: var(--status-enrolled-text);
+  padding: 12px 15px;
+  border: 1px solid var(--status-enrolled-dot);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.error-msg {
+  background-color: var(--status-declined-bg);
+  color: var(--status-declined-text);
+  padding: 12px 15px;
+  border: 1px solid var(--status-declined-dot);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.back-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-back {
+  display: inline-block;
+  background-color: var(--dark-gray);
+  color: var(--white);
+  padding: 11px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-back:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}

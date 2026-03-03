@@ -1,0 +1,269 @@
+/* School Website 1/css/manage_users.css - UPDATED STYLES */
+:root {
+    --primary-blue: #0000CD;
+    --secondary-red: #FF0000; /* For delete actions */
+    --accent-yellow: #FFD700;
+    --accent-green: #228B22; /* For add/submit actions */
+    --white: #FFFFFF;
+    --light-blue: #E6E6FF; /* For table headers */
+    --light-yellow: #FFFBE6; /* For table row hover */
+    --gray: #f5f5f5; /* Page background */
+    --dark-gray: #444; /* Text color */
+    --medium-gray: #ddd; /* Borders */
+    --button-blue: #007bff; /* A standard blue for edit/view */
+    --button-blue-hover: #0056b3;
+    --button-red-hover: #c82333; /* Darker red for delete hover */
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Poppins';
+    background-color: var(--gray);
+    padding: 20px;
+    color: var(--dark-gray);
+    margin: 0;
+}
+
+.user-management-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 28px;
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.user-management-container:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.user-management-container h2,
+.user-management-container h3 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    font-weight: 700;
+    padding-bottom: 8px;
+    position: relative;
+    letter-spacing: -0.3px;
+}
+.user-management-container h2 {
+    font-size: 1.95rem;
+    text-align: center;
+}
+.user-management-container h3 {
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--accent-yellow);
+    display: inline-block;
+    margin-top: 25px;
+}
+.user-management-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 4px;
+    background-color: var(--accent-yellow);
+    border-radius: 2px;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary-blue);
+    font-size: 0.95rem;
+    letter-spacing: -0.2px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group select {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    background-color: var(--white);
+    transition: all 0.3s ease;
+}
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus,
+.form-group select:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(0, 0, 205, 0.1);
+    outline: none;
+    background-color: rgba(0, 0, 205, 0.02);
+}
+
+.btn-submit-user {
+    background-color: var(--accent-green);
+    color: var(--white);
+    padding: 11px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 3px 10px rgba(34, 139, 34, 0.3);
+}
+.btn-submit-user:hover {
+    background-color: #1a6d1a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(34, 139, 34, 0.4);
+}
+.btn-submit-user i { /* Added for icon spacing */
+    margin-right: 6px;
+}
+
+.message-area .alert { /* For Bootstrap alerts */
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 12px 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+/* ... (message success and error styles remain the same) ... */
+
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease;
+}
+
+.users-table th, .users-table td {
+    border: 1px solid #e0e0e0;
+    padding: 11px 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.users-table th {
+    background-color: var(--light-blue);
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+.users-table tbody tr {
+    transition: all 0.3s ease;
+}
+.users-table tbody tr:hover {
+    background-color: var(--light-yellow);
+}
+
+/* UPDATED: Action Buttons Styling */
+.action-buttons-group {
+    display: flex;
+    gap: 8px; /* Space between buttons */
+    align-items: center;
+    justify-content: flex-start; /* Align buttons to the start of the cell */
+}
+
+.btn-action { /* Common class for new action buttons */
+    padding: 7px 12px;
+    font-size: 0.85rem;
+    border-radius: 7px;
+    text-decoration: none;
+    color: var(--white) !important;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.btn-action i {
+    margin-right: 5px;
+}
+.btn-action:hover {
+    transform: translateY(-2px);
+}
+
+.btn-action.edit-user-btn { /* Specific style for edit button */
+    background-color: var(--button-blue);
+}
+.btn-action.edit-user-btn:hover {
+    background-color: var(--button-blue-hover);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.btn-action.delete-user-btn { /* Specific style for delete button */
+    background-color: var(--secondary-red);
+}
+.btn-action.delete-user-btn:hover {
+    background-color: var(--button-red-hover);
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+/* REMOVE old icon-only delete button style if not needed elsewhere */
+/*
+.delete-user-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--secondary-red);
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 5px;
+    transition: color 0.2s ease-in-out;
+    vertical-align: middle;
+}
+.delete-user-btn:hover {
+    color: #c82333;
+}
+*/
+
+
+.table-scrollable {
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+/* UPDATED: Back to Dashboard Button Styling */
+.back-container {
+  text-align: center; /* Center the button if it's the only element */
+  margin-top: 30px; /* Consistent margin */
+}
+.btn-back-to-dashboard { /* New specific class */
+  display: inline-flex;
+  align-items: center;
+  padding: 11px 24px;
+  background-color: var(--dark-gray);
+  color: var(--white) !important;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-back-to-dashboard:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.btn-back-to-dashboard i {
+  margin-right: 8px;
+}

@@ -1,0 +1,150 @@
+/* School Website 1/css/edit_user.css */
+:root {
+    --primary-blue: #0000CD;
+    --accent-yellow: #FFD700;
+    --accent-green: #228B22; /* For save/update buttons */
+    --white: #FFFFFF;
+    --gray: #f5f5f5;
+    --dark-gray: #444;
+    --medium-gray: #ddd;
+    --status-enrolled-bg: #e6f7f0; /* For success messages */
+    --status-enrolled-text: #155724;
+    --status-enrolled-dot: #28a745;
+    --status-declined-bg: #f8d7da; /* Error message background */
+    --status-declined-text: #721c24; /* Error message text */
+}
+
+html {
+    font-size: 112.5%;
+}
+
+body {
+  background-color: var(--gray);
+  font-family: 'Poppins';
+  margin: 0;
+  padding: 20px;
+  color: var(--dark-gray);
+}
+
+.edit-user-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.edit-user-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: var(--primary-blue);
+  position: relative;
+  padding-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+.edit-user-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: var(--accent-yellow);
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 5px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+}
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus,
+.form-group select:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(0, 0, 205, 0.1);
+    outline: none;
+}
+.form-group input[disabled] {
+    background-color: #e9ecef;
+    opacity: 0.7;
+}
+
+
+.btn-submit-update {
+  background-color: var(--accent-green);
+  color: var(--white);
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 20px auto 0 auto;
+  width: fit-content;
+}
+.btn-submit-update:hover {
+  background-color: #1a6d1a;
+}
+.btn-submit-update i { margin-right: 8px; }
+
+
+.message-area .alert { /* For Bootstrap alerts */
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 12px 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.message-area .alert-success {
+    background-color: var(--status-enrolled-bg);
+    color: var(--status-enrolled-text);
+    border: 1px solid var(--status-enrolled-dot);
+}
+.message-area .alert-danger {
+    background-color: var(--status-declined-bg);
+    color: var(--status-declined-text);
+    border: 1px solid var(--status-declined-dot);
+}
+
+
+.back-container {
+  text-align: center;
+  margin-top: 25px;
+}
+.btn-back {
+  display: inline-block;
+  background-color: var(--dark-gray);
+  color: var(--white);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  font-size: 0.9rem;
+}
+.btn-back:hover {
+  background-color: #333;
+}
+.btn-back i { margin-right: 8px; }

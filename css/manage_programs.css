@@ -1,0 +1,279 @@
+/* Refined: School Website 1/css/manage_programs.css */
+:root {
+    --primary-blue: #0000CD;
+    --secondary-red: #FF0000;
+    --accent-yellow: #FFD700;
+    --accent-green: #228B22;
+    --white: #FFFFFF;
+    --light-blue: #E6E6FF;
+    --light-yellow: #FFFBE6;
+    --gray: #f5f5f5;
+    --dark-gray: #444;
+    --medium-gray: #ddd;
+    --status-enrolled-bg: #e6f7f0;
+    --status-enrolled-text: #155724;
+    --status-enrolled-dot: #28a745;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+  font-family: 'Poppins';
+  background-color: var(--gray);
+  padding: 20px;
+  color: var(--dark-gray);
+  margin: 0;
+}
+
+.container { /* Using Bootstrap's container */
+  max-width: 1100px;
+  margin: 20px auto;
+  background-color: var(--white);
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+h2.text-center {
+  font-size: 1.95rem;
+  color: var(--primary-blue);
+  margin-bottom: 28px;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+h2.text-center::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 4px;
+    background-color: var(--accent-yellow);
+    border-radius: 2px;
+}
+
+.alert-success {
+    background-color: var(--status-enrolled-bg);
+    color: var(--status-enrolled-text);
+    border-color: var(--status-enrolled-dot);
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 12px 18px;
+    margin-bottom: 20px;
+}
+
+/* Add/Edit Form Styles */
+form { /* Applied to both add and edit forms if structure is similar */
+    margin-bottom: 30px;
+    padding: 26px;
+    background-color: var(--light-blue);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 205, 0.08);
+    border: 1px solid rgba(0, 0, 205, 0.1);
+    transition: all 0.3s ease;
+}
+
+form:hover {
+  background-color: rgba(0, 0, 205, 0.03);
+  box-shadow: 0 4px 14px rgba(0, 0, 205, 0.12);
+}
+form .form-control {
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    padding: 11px 14px;
+    font-size: 0.95rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    background-color: var(--white);
+    transition: all 0.3s ease;
+}
+form .form-control:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(0, 0, 205, 0.1);
+    outline: none;
+    background-color: rgba(0, 0, 205, 0.02);
+}
+form textarea.form-control {
+    min-height: 80px;
+    resize: vertical;
+}
+form small {
+    font-size: 0.8rem;
+    color: #6c757d;
+    display: block;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+form label { /* If using explicit labels */
+    font-weight: 600;
+    color: var(--primary-blue);
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    display: block;
+    letter-spacing: -0.2px;
+}
+
+
+.text-center-btn { /* Container for Add Program Button */
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 10px;
+}
+.text-center-btn button[type="submit"].btn-primary {
+  background-color: var(--accent-green);
+  color: var(--white);
+  border: none;
+  padding: 11px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(34, 139, 34, 0.3);
+}
+.text-center-btn button[type="submit"].btn-primary:hover {
+  background-color: #1a6d1a;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(34, 139, 34, 0.4);
+}
+
+.table {
+    font-size: 0.9rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+.table thead th {
+    background-color: var(--light-blue);
+    color: var(--primary-blue);
+    font-weight: 700;
+    padding: 13px 15px;
+    text-align: left;
+    border-bottom: 2px solid var(--primary-blue);
+    border-top: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+}
+.table th:first-child { border-left: none; }
+.table th:last-child { border-right: none; }
+
+.table td {
+    border: 1px solid #e0e0e0;
+    vertical-align: middle;
+    padding: 11px 12px;
+}
+.table td:first-child {border-left: none;}
+.table td:last-child {border-right: none;}
+.table tr td { border-top: none; border-bottom: 1px solid #e0e0e0; }
+.table tr:last-child td { border-bottom: none; }
+
+.table tbody tr {
+    transition: all 0.3s ease;
+}
+.table tbody tr:hover {
+    background-color: var(--light-yellow);
+}
+
+img.program-image {
+  max-width: 100px; /* Slightly smaller for table */
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid var(--medium-gray);
+  margin-bottom: 5px;
+}
+
+.table input[type="file"].form-control {
+    font-size: 0.85rem;
+    padding: 6px 8px;
+}
+.table textarea.form-control {
+    font-size: 0.9rem;
+    min-height: 60px;
+}
+.table small {
+    font-size: 0.75rem;
+}
+
+.table .action-buttons-group { /* Wrapper for consistent button alignment */
+    display: flex;
+    flex-direction: column; /* Stack buttons for more space */
+    gap: 5px;
+    align-items: flex-start; /* Align to left */
+}
+.table .action-buttons-group form {margin:0; padding:0; background:none; box-shadow:none;} /* Reset form */
+
+
+.table .btn-success.btn-sm { /* Save button */
+    background-color: #007bff;
+    border-color: #007bff;
+    color: var(--white);
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 7px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+}
+.table .btn-success.btn-sm:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.table .btn-danger.btn-sm { /* Delete button */
+    background-color: var(--secondary-red);
+    border-color: var(--secondary-red);
+    color: var(--white);
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 7px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255, 0, 0, 0.2);
+}
+.table .btn-danger.btn-sm:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+
+.back-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-back {
+  display: inline-block;
+  background-color: var(--dark-gray);
+  color: var(--white);
+  padding: 11px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-back:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}

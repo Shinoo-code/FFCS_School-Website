@@ -1,0 +1,473 @@
+/* School Website/css/common.css */
+
+/* Common HTML and Body Resets/Base Styles (Optional - if you want consistent base) */
+html {
+    font-size: 112.5%; /* Base font size increased - from various files */
+}
+
+body {
+    font-family: 'Poppins'; /* Common font stack */
+    position: relative; /* Often used for positioning decorative elements or back-to-top buttons */
+    overflow-x: hidden; /* Common setting to prevent horizontal scrollbars */
+    line-height: 1.6; /* Good default line height for readability */
+    /* background-color: #fffdf8; /* A common background color from index.css, if desired globally */
+    /* color: #001133; /* A common text color from index.css, if desired globally */
+}
+
+/* Consistent Navbar Styling (derived from results.css and others) */
+.navbar {
+    position: sticky; 
+    top: 0;       
+    width: 100%;
+    z-index: 1030;
+    background-color: #fffdf8 !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional */
+}
+
+.navbar .navbar-brand {
+    color: #001133 !important; /* Text color from index.css .logo h2 */
+    font-weight: 900 !important;
+    font-size: 1.75rem !important; /* Adjust to visually match the h2 size in index.html */
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-right: auto; /* Push other elements to the right initially */
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #001133 !important; /* Text color from index.css nav a */
+    font-weight: 600 !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    text-decoration: none !important;
+    font-size: 1rem; /* Standard font size for nav links */
+    transition: color 0.2s ease-in-out; /* Added transition from index.css */
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: #00b44f !important; /* Theme green for hover/active */
+}
+
+/* Faculty Login Button styling (common across pages with this navbar) */
+.navbar .btn-outline-dark { /* Assuming this is the class used for the faculty login button in the navbar */
+    color: #001133 !important;
+    background-color: transparent !important;
+    border: 2px solid #001133 !important;
+    padding: 10px 20px !important;
+    border-radius: 8px !important;
+    font-weight: bold !important;
+    line-height: 1.5 !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    margin-left: 20px; /* Add some space if it's too close to nav links */
+}
+
+.navbar .btn-outline-dark:hover {
+    color: #ffffff !important;
+    background-color: #001133 !important;
+    border-color: #001133 !important;
+}
+
+/* Centering navbar items - Bootstrap 5 approach often involves mx-auto on .navbar-nav */
+.navbar-collapse {
+    justify-content: space-between;
+}
+
+.navbar-nav {
+    margin-left: auto !important; /* Center the nav links block */
+    margin-right: auto !important;
+}
+
+/* Adjustments for Bootstrap's toggler icon */
+.navbar-toggler {
+    border-color: rgba(0,17,51,0.1) !important; /* Softer border for toggler */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 17, 51, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Ensure the navbar items are properly aligned vertically */
+.navbar .container, .navbar .container-fluid {
+    display: flex;
+    align-items: center;
+}
+
+/* Common Back to Top Button Styling (if you want it standardized) */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999; /* Ensure it's above other elements */
+    background-color: #001133; /* Theme green */
+    color: white;
+    border: none;
+    outline: none;
+    padding: 10px 15px; /* Slightly adjusted */
+    border-radius: 50%;
+    font-size: 20px; /* Slightly adjusted */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    line-height: 1; /* Ensure icon is centered */
+}
+#backToTop:hover {
+    background-color: #001133; /* Darker green */
+}
+
+/* Common Decorative Floating Shapes (Example, if you want a base style) */
+.floating-shape {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 180, 79, 0.2); /* Example: theme green with alpha */
+    border-radius: 50%;
+    animation: floatAnimation 10s linear infinite alternate; /* Renamed animation */
+    opacity: 0.7;
+    z-index: 0; /* Behind content */
+}
+
+@keyframes floatAnimation { /* Renamed animation */
+    0% {
+        transform: translateY(0px) translateX(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) translateX(10px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0px) translateX(0px) rotate(360deg);
+    }
+}
+
+/* css/common.css - Add these styles for the new footer */
+
+/* Site Footer General Styling */
+.site-footer {
+    background-color: #001133; /* Green background from image */
+    color: white;
+    font-size: 14px; /* Base font size for footer */
+    position: relative; /* For potential decorative elements */
+    border-top: 3px solid #ffffff; /* Optional: Yellow accent line */
+}
+
+.site-footer .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* School Name and Description */
+.footer-col-school-info .footer-school-name {
+    font-weight: 700; /* Bolder school name */
+    font-size: 1.3rem; /* Larger school name */
+    color: white;
+}
+
+.footer-col-school-info .footer-description {
+    font-size: 0.85rem; /* Smaller description text */
+    line-height: 1.5;
+    opacity: 0.9;
+    margin-bottom: 1rem; /* Adjusted margin */
+}
+
+/* Social Media Icons */
+.footer-social-icons .btn-light {
+    background-color: rgba(255, 255, 255, 0.2); /* Lighter background for icons */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+}
+.footer-social-icons .btn-light:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+.footer-social-icons .btn-light i {
+    font-size: 1rem; /* Adjust icon size if needed */
+}
+
+
+/* Footer Headings for Links */
+.site-footer .footer-heading {
+    font-weight: 600; /* Bolder headings for links */
+    font-size: 1rem;   /* Standard heading size */
+    color: white;
+    text-transform: capitalize;
+}
+
+/* Footer Links List Styling */
+.site-footer .footer-links-list li {
+    margin-bottom: 0.4rem; /* Space between links */
+}
+
+.site-footer .footer-links-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem; /* Smaller link text */
+    transition: color 0.2s ease-in-out, padding-left 0.2s ease-in-out;
+    display: inline-block; /* Allows padding effect on hover */
+}
+
+.site-footer .footer-links-list li a:hover {
+    color: #ffd24c; /* Yellow accent on hover */
+    padding-left: 5px; /* Slight indent on hover */
+}
+
+/* Footer Divider (Horizontal Rule) */
+.site-footer .footer-divider {
+    border-color: rgba(255, 255, 255, 0.2); /* Lighter divider */
+}
+
+/* Copyright Text */
+.site-footer .footer-copyright {
+    color: rgba(255, 255, 255, 0.8); /* Slightly transparent copyright text */
+    padding-top: 0.5rem; /* Space above copyright */
+}
+
+
+/* Back to Top Button (already in your common.css or individual page JS, ensure it's styled consistently) */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px; /* Adjusted position */
+    right: 20px;  /* Adjusted position */
+    z-index: 1030; /* Ensure it's above most elements */
+    background-color: #001133; /* Slightly darker green than footer */
+    color: white;
+    border: none;
+    outline: none;
+    padding: 8px 13px; /* Adjusted padding */
+    border-radius: 50%;
+    font-size: 18px;   /* Adjusted icon size */
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    line-height: 1;
+    transition: background-color 0.3s ease;
+}
+#backToTop:hover {
+    background-color: #007536; /* Even darker on hover */
+}
+
+/* Responsive adjustments for footer columns if needed */
+@media (max-width: 991.98px) { /* Medium devices (tablets, less than 992px) */
+    .footer-col-school-info,
+    .footer-col-quick-links,
+    .footer-col-legal-links {
+        text-align: center; /* Center text on smaller screens */
+    }
+    .footer-social-icons {
+        justify-content: center; /* Center social icons */
+    }
+    .site-footer .footer-links-list {
+        padding-left: 0; /* Remove padding for centered lists */
+    }
+}
+
+@media (max-width: 767.98px) { /* Small devices (landscape phones, less than 768px) */
+    .footer-col-quick-links .col-6 {
+        text-align: center; /* Ensure quick links columns are centered */
+    }
+    .site-footer .footer-heading.invisible {
+        display: none; /* Hide the invisible heading on small screens to save space */
+    }
+}
+
+/* =============== CHATBOT STYLES =============== */
+:root {
+    --chatbot-primary: #016897; /* Main blue from your site */
+    --chatbot-secondary: #f0f4f8;
+    --chatbot-bg: #ffffff;
+    --chatbot-text: #333;
+    --bot-message-bg: #e9ecef;
+    --user-message-bg: var(--chatbot-primary);
+    --user-message-text: #ffffff;
+}
+
+#chatbot-toggle {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--chatbot-primary);
+    color: white;
+    font-size: 28px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9998;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#chatbot-toggle:hover {
+    transform: scale(1.1);
+    background-color: #01587f; /* Darker blue */
+}
+
+#chatbot-toggle .bi-x-lg {
+    font-size: 24px;
+}
+
+#chat-window {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    width: 370px;
+    max-width: 90vw;
+    height: 500px;
+    max-height: 70vh;
+    background: var(--chatbot-bg);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 9999;
+    
+    /* Start hidden */
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+#chat-window.active {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    visibility: visible;
+}
+
+.chat-header {
+    background: var(--chatbot-primary);
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#chat-body {
+    flex-grow: 1;
+    padding: 20px 20px 10px 20px;
+    overflow-y: auto;
+    background-color: var(--chatbot-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.chatbot-message {
+    display: flex;
+    max-width: 85%;
+}
+
+.chatbot-message-text {
+    padding: 10px 15px;
+    border-radius: 18px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.chatbot-message.bot {
+    align-self: flex-start;
+}
+.chatbot-message.bot .chatbot-message-text {
+    background: var(--bot-message-bg);
+    color: var(--chatbot-text);
+    border-top-left-radius: 0;
+}
+
+.chatbot-message.user {
+    align-self: flex-end;
+}
+.chatbot-message.user .chatbot-message-text {
+    background: var(--user-message-bg);
+    color: var(--user-message-text);
+    border-top-right-radius: 0;
+}
+
+.chatbot-message.loading {
+    align-self: flex-start;
+}
+.chatbot-message.loading .chatbot-message-text {
+    background: var(--bot-message-bg);
+    color: var(--chatbot-text);
+    border-top-left-radius: 0;
+    padding: 12px 15px;
+}
+/* Typing indicator */
+.typing-indicator span {
+    height: 8px;
+    width: 8px;
+    background-color: #999;
+    border-radius: 50%;
+    display: inline-block;
+    animation: typing 1.4s infinite;
+}
+.typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+.typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes typing {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1.0); }
+}
+
+.chat-footer {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    background: var(--chatbot-bg);
+}
+
+#chat-input {
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    margin-right: 10px;
+}
+#chat-input:focus {
+    outline: none;
+    border-color: var(--chatbot-primary);
+    box-shadow: 0 0 0 2px rgba(1, 104, 151, 0.2);
+}
+
+#chat-send-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: var(--chatbot-primary);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#chat-send-btn:hover {
+    background-color: #01587f;
+}
+
+/* For mobile */
+@media (max-width: 480px) {
+    #chat-window {
+        bottom: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+    #chatbot-toggle {
+        bottom: 15px;
+        right: 15px;
+    }
+}
+/* =============== END CHATBOT STYLES =============== */

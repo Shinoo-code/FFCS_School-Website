@@ -1,0 +1,372 @@
+/* css/login.css - Responsive Update */
+
+:root {
+    --primary-blue: #0000CD; /* MediumBlue */
+    --secondary-red: #D9363E; /* A slightly softer red for the button */
+    --accent-yellow: #FFD700; /* Gold */
+    --white: #FFFFFF;
+    --light-gray-bg: #f0f2f5; /* Light background for the page */
+    --text-dark: #333;
+    --text-light: #555;
+    --border-color: #ddd;
+    --input-focus-border: var(--primary-blue);
+    --input-focus-shadow: rgba(0, 0, 205, 0.15);
+    --error-bg: rgba(255, 0, 0, 0.05);
+    --error-text: #D32F2F; /* Darker red for error text */
+    --error-border: rgba(255, 0, 0, 0.3);
+
+    /* Font Families */
+    --font-primary: 'Poppins';
+    --font-secondary: 'Poppins';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%; /* Base font size increased */
+    height: 100%;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--light-gray-bg);
+    display: flex; /* For centering the login page wrapper */
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+    min-height: 100vh; /* Ensure full viewport height */
+    padding: 20px; /* Add some padding for smaller screens */
+    line-height: 1.6;
+    /* Background pattern from the image */
+    background-image: 
+        linear-gradient(rgba(0, 0, 205, 0.05) 1px, transparent 1px), 
+        linear-gradient(90deg, rgba(0, 0, 205, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px; /* Size of the grid pattern */
+}
+
+.login-page-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    background-color: var(--white);
+    border-radius: 12px; /* Slightly more rounded corners */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    overflow: hidden;
+    width: 100%;
+    max-width: 420px; /* Max width for the container */
+    margin: 0 auto; /* Centering for safety */
+    display: flex;
+    flex-direction: column;
+}
+
+.login-header {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 20px 25px; /* Adjusted padding */
+    text-align: center;
+}
+
+.login-header h2 {
+    margin: 0;
+    font-size: 1.6rem; /* Adjusted font size */
+    font-weight: 700; /* Nunito Bold */
+}
+
+.login-body {
+    padding: 25px 30px; /* Consistent padding */
+    flex-grow: 1; /* Allow body to take available space */
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 70px; /* Slightly smaller logo */
+    height: 70px;
+    margin-bottom: 8px; /* Space between logo and school name */
+}
+
+.school-name {
+    color: var(--primary-blue);
+    font-size: 1.1rem; /* Adjusted size */
+    font-weight: 600; /* Nunito SemiBold */
+}
+
+.login-form .form-group {
+    margin-bottom: 18px; /* Slightly reduced margin */
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 6px; /* Space between label and input */
+    font-weight: 600; /* Nunito SemiBold */
+    color: var(--text-dark);
+    font-size: 0.9rem;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px; /* More rounded inputs */
+    font-size: 1rem;
+    font-family: var(--font-secondary); /* Arial for input fields for clarity */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+    border-color: var(--input-focus-border);
+    box-shadow: 0 0 0 3px var(--input-focus-shadow);
+    outline: none;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-bottom: 20px; /* Space before login button */
+    margin-top: -10px; /* Pull it up a bit */
+}
+
+.forgot-password a {
+    color: var(--primary-blue);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+    color: var(--secondary-red);
+    text-decoration: underline;
+}
+
+.login-btn {
+    background-color: var(--secondary-red);
+    color: white;
+    border: none;
+    padding: 12px; /* Consistent padding */
+    border-radius: 8px; /* Match input fields */
+    font-size: 1.05rem; /* Slightly larger */
+    font-weight: 700; /* Nunito Bold */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(217, 54, 62, 0.2);
+}
+
+.login-btn:hover {
+    background-color: #c52d35; /* Darker shade of secondary-red */
+    transform: translateY(-2px);
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 25px; /* More space above footer */
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.login-footer a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 600; /* Nunito SemiBold */
+    transition: color 0.3s ease;
+}
+
+.login-footer a:hover {
+    color: var(--secondary-red);
+    text-decoration: underline;
+}
+
+.error-message {
+    background-color: var(--error-bg);
+    color: var(--error-text);
+    border: 1px solid var(--error-border);
+    padding: 12px 15px; /* Increased padding */
+    border-radius: 8px; /* Match other elements */
+    margin-bottom: 18px;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600; /* Make error message slightly bolder */
+}
+
+/* Responsive Adjustments */
+
+/* For screens smaller than 480px (typical mobile portrait) */
+@media (max-width: 480px) {
+    body {
+        padding: 15px; /* Reduce padding on very small screens */
+    }
+
+    .login-container {
+        margin: 10px; /* Add small margin around container */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Softer shadow for mobile */
+    }
+
+    .login-header {
+        padding: 18px 20px;
+    }
+
+    .login-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .login-body {
+        padding: 20px 25px; /* Adjust padding for smaller screens */
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .school-name {
+        font-size: 1rem;
+    }
+
+    .login-form input[type="email"],
+    .login-form input[type="password"] {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+
+    .login-btn {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .forgot-password a,
+    .login-footer {
+        font-size: 0.8rem;
+    }
+}
+
+/* For screens smaller than 360px (very small mobile devices) */
+@media (max-width: 359px) {
+    .login-header h2 {
+        font-size: 1.3rem;
+    }
+    .login-body {
+        padding: 15px 20px;
+    }
+     .school-name {
+        font-size: 0.9rem;
+    }
+}
+
+/* css/login.css - Add these styles for the custom modal */
+
+/* ... (your existing login.css styles) ... */
+
+/* Custom Modal for Forgot Password Instruction */
+.custom-modal-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55); /* Semi-transparent backdrop */
+    z-index: 1060; /* High z-index to be on top */
+    display: flex; /* Used with align-items and justify-content to center */
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    opacity: 0; /* Initially hidden for transition */
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.custom-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease;
+}
+
+.custom-modal-content {
+    background-color: var(--white, #FFFFFF);
+    border-radius: 10px; /* Consistent with dashboard elements */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 450px; /* Adjust as needed */
+    position: relative;
+    transform: scale(0.95); /* Initial state for transition */
+    transition: transform 0.3s ease;
+}
+
+.custom-modal-overlay.active .custom-modal-content {
+    transform: scale(1);
+}
+
+.custom-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem; /* Consistent padding */
+    background-color: var(--primary-blue, #0000CD); /* Using primary blue from dashboard/login */
+    color: var(--white, #FFFFFF);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Subtle border */
+}
+
+.custom-modal-title {
+    margin: 0;
+    font-size: 1.25rem; /* Good title size */
+    font-weight: 600; /* Nunito SemiBold if var(--font-primary) is Nunito */
+}
+
+.custom-modal-close-btn {
+    background: none;
+    border: none;
+    color: var(--white, #FFFFFF);
+    font-size: 1.8rem; /* Larger close button */
+    font-weight: bold;
+    line-height: 1;
+    opacity: 0.8;
+    cursor: pointer;
+    padding: 0.25rem 0.75rem; /* Make it easier to click */
+}
+.custom-modal-close-btn:hover {
+    opacity: 1;
+}
+
+.custom-modal-body {
+    padding: 1.5rem 1.75rem; /* More padding in body */
+    line-height: 1.6;
+    color: var(--text-dark, #333);
+}
+
+.custom-modal-footer {
+    padding: 1rem 1.5rem;
+    text-align: right; /* Align button to the right */
+    border-top: 1px solid var(--border-color, #ddd);
+    background-color: #f9f9f9; /* Slightly off-white footer */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.btn-custom-modal-ok {
+    background-color: var(--secondary-red, #D9363E); /* Using secondary red from login button */
+    color: white;
+    border: none;
+    padding: 0.6rem 1.5rem; /* Good padding */
+    border-radius: 6px; /* Match other buttons if needed */
+    font-size: 0.95rem;
+    font-weight: 600; /* Nunito SemiBold */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-custom-modal-ok:hover {
+    background-color: #c52d35; /* Darker shade of secondary-red */
+}

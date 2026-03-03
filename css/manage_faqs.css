@@ -1,0 +1,254 @@
+/* Refined: School Website 1/css/manage_faqs.css */
+:root {
+    --primary-blue: #0000CD;
+    --secondary-red: #FF0000;
+    --accent-yellow: #FFD700;
+    --accent-green: #228B22;
+    --white: #FFFFFF;
+    --light-blue: #E6E6FF;
+    --light-yellow: #FFFBE6;
+    --gray: #f5f5f5;
+    --dark-gray: #444;
+    --medium-gray: #ddd;
+    --status-enrolled-bg: #e6f7f0;
+    --status-enrolled-text: #155724;
+    --status-enrolled-dot: #28a745;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+  font-family: 'Poppins';
+  padding: 20px;
+  background-color: var(--gray);
+  color: var(--dark-gray);
+  margin: 0;
+}
+
+.page-container { /* Wrapper for content */
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: var(--white);
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.page-container:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+h2 {
+  text-align: center;
+  color: var(--primary-blue);
+  font-size: 1.95rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  position: relative;
+  padding-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 4px;
+    background-color: var(--accent-yellow);
+    border-radius: 2px;
+}
+
+.success-msg {
+  background-color: var(--status-enrolled-bg);
+  color: var(--status-enrolled-text);
+  border: 1px solid var(--status-enrolled-dot);
+  padding: 12px 18px;
+  margin: 0 auto 25px auto; /* Centered with more bottom margin */
+  width: fit-content;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.faq-form {
+  margin: 0 auto 30px auto;
+  max-width: 700px;
+  background-color: var(--light-blue);
+  padding: 26px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 205, 0.08);
+  border: 1px solid rgba(0, 0, 205, 0.1);
+  transition: all 0.3s ease;
+}
+
+.faq-form:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 205, 0.12);
+}
+.faq-form label { /* Added label styling */
+    display: block;
+    text-align: left; /* Align labels to the left */
+    margin-left: auto; /* For centering if max-width is less than container */
+    margin-right: auto;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    letter-spacing: -0.2px;
+}
+
+.faq-form input[type="text"],
+.faq-form textarea {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 15px auto;
+  display: block;
+  padding: 11px 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  background-color: var(--white);
+  transition: all 0.3s ease;
+}
+.faq-form input[type="text"]:focus,
+.faq-form textarea:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(0, 0, 205, 0.1);
+  outline: none;
+  background-color: rgba(0, 0, 205, 0.02);
+}
+
+.faq-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.btn-custom { /* For Add FAQ button */
+  padding: 11px 28px;
+  background-color: var(--accent-green);
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  display: block; /* Center the button */
+  margin: 10px auto 0 auto;
+  width: fit-content;
+  box-shadow: 0 3px 10px rgba(34, 139, 34, 0.3);
+}
+.btn-custom:hover {
+  background-color: #1a6d1a; /* Darker green */
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(34, 139, 34, 0.4);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+table th, table td {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 13px 15px;
+  text-align: left;
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+table th:first-child, table td:first-child { border-left: none; padding-left: 20px; } /* Add more padding to first cell */
+table th:last-child, table td:last-child { border-right: none; padding-right: 20px; } /* Add more padding to last cell */
+
+
+table th {
+  background-color: var(--light-blue);
+  color: var(--primary-blue);
+  font-weight: 700;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 2px solid var(--primary-blue);
+}
+table tbody tr {
+  transition: all 0.3s ease;
+}
+table tbody tr:hover {
+  background-color: var(--light-yellow);
+}
+table tr:last-child td {
+    border-bottom: none;
+}
+
+.action-buttons-group { /* Wrapper for action buttons for better alignment */
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.action-buttons-group form { /* Reset form styles if buttons are wrapped in forms */
+    margin: 0;
+}
+
+
+.btn-edit, .btn-delete {
+  padding: 7px 14px;
+  font-size: 0.85rem;
+  border: none;
+  color: var(--white);
+  border-radius: 7px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-edit {
+  background-color: #007bff;
+}
+.btn-edit:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.btn-delete {
+  background-color: var(--secondary-red);
+}
+.btn-delete:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+
+.back-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-back {
+  display: inline-block;
+  background-color: var(--dark-gray);
+  color: var(--white);
+  padding: 11px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-back:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}

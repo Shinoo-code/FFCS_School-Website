@@ -1,0 +1,135 @@
+/* Refined: School Website 1/css/edit_contact_info.css */
+:root {
+    --primary-blue: #0000CD;
+    --accent-yellow: #FFD700;
+    --accent-green: #228B22;
+    --white: #FFFFFF;
+    --gray: #f5f5f5;
+    --dark-gray: #444;
+    --medium-gray: #ddd;
+    --status-enrolled-bg: #e6f7f0;
+    --status-enrolled-text: #155724;
+    --status-enrolled-dot: #28a745;
+}
+
+html {
+    font-size: 112.5%;
+}
+
+body {
+  font-family: 'Poppins';
+  background-color: var(--gray);
+  padding: 20px; /* Consistent with other manage pages */
+  color: var(--dark-gray);
+  margin:0;
+}
+
+.container { /* This is likely the Bootstrap .container class */
+  max-width: 800px; /* Good width for this type of form */
+  margin: 20px auto;
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2.text-center {
+  font-size: 1.8rem;
+  color: var(--primary-blue);
+  margin-bottom: 25px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 10px;
+}
+h2.text-center::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: var(--accent-yellow);
+}
+
+.alert-success {
+    background-color: var(--status-enrolled-bg);
+    color: var(--status-enrolled-text);
+    border-color: var(--status-enrolled-dot);
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 12px 18px;
+    margin-bottom: 20px;
+}
+
+.form-section {
+    margin-bottom: 1.5rem; /* Slightly less than original 2rem */
+    border: 1px solid var(--medium-gray);
+    padding: 20px; /* Consistent padding */
+    border-radius: 8px;
+    background-color: #fdfdfd; /* Light bg for each item's section */
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04); /* Softer shadow for inner sections */
+}
+
+.form-label {
+    font-weight: bold;
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    border: 1px solid var(--medium-gray);
+    border-radius: 5px;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box; /* Important for width calculation */
+}
+.form-control:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(0, 0, 205, 0.1);
+    outline: none;
+}
+.mb-2 { /* Bootstrap margin class */
+    margin-bottom: 1rem !important; /* More space between label/input pairs */
+}
+
+
+button[type="submit"].btn-primary {
+  background-color: var(--accent-green);
+  border-color: var(--accent-green);
+  color: var(--white);
+  font-weight: bold;
+  padding: 10px 25px; /* Good padding */
+  border-radius: 5px;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  display: block; /* Center button */
+  margin: 20px auto 0 auto; /* Margin top and centered */
+  width: fit-content;
+}
+button[type="submit"].btn-primary:hover {
+  background-color: #1a6d1a;
+  border-color: #1a6d1a;
+}
+
+.back-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-back {
+  display: inline-block;
+  background-color: var(--dark-gray);
+  color: var(--white);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  font-size: 0.9rem;
+}
+.btn-back:hover {
+  background-color: #333;
+}

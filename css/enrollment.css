@@ -1,0 +1,571 @@
+html {
+    font-size: 110%; /* Base font size increased */
+}
+
+:root {
+    --kinderly-bg: #fffdf6;
+    --kinderly-text: #0a0a23; 
+    --kinderly-primary-green: #016897;
+    --kinderly-accent-yellow: #c5e9fd; 
+    --kinderly-accent-pink: #ff7f7f;
+    --kinderly-form-highlight: #001f54; 
+    --kinderly-button-bg: #016897;
+    --kinderly-button-text: #ffffff;
+    --kinderly-light-accent-bg: #f7fbff;
+    --kinderly-border-color: #d0d9e8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    background-color: var(--kinderly-bg);
+    font-family: 'Segoe UI', 'Nunito', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+    padding-top: 70px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.enrollment {
+    padding: 40px 0 80px;
+    background-color: transparent;
+    position: relative;
+}
+
+.enrollment-container {
+    background-color: var(--kinderly-light-accent-bg); 
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 30px 40px;
+    border: 1px solid var(--kinderly-border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.enrollment-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, var(--kinderly-primary-green), var(--kinderly-accent-yellow));
+}
+
+.enrollment-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.enrollment-title {
+    color: var(--kinderly-text);
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.enrollment-subtitle {
+    color: #555;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.enrollment-instructions {
+    background-color: #e9f5e9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    font-style: italic;
+    color: #333;
+    border: 1px dashed var(--kinderly-primary-green);
+}
+
+.enrollment-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.form-section {
+    margin-bottom: 30px;
+    grid-column: span 3;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.form-section-title {
+    color: var(--kinderly-primary-green);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    position: relative;
+    padding-left: 15px;
+}
+
+.form-section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background-color: var(--kinderly-accent-yellow);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group.full-width {
+    grid-column: span 3;
+}
+
+.form-group.half-width {
+     /* Adjusted for potential changes, keep as is or adjust if needed */
+    grid-column: span 2;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+input, select, textarea {
+    border: 1px solid var(--kinderly-border-color);
+    border-radius: 8px;
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--kinderly-form-highlight);
+    box-shadow: 0 0 0 3px rgba(0, 31, 84, 0.1);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.checkbox-group {
+    margin-top: 5px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start; /* Changed alignment */
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    width: auto; /* Allow natural checkbox size */
+    margin-right: 10px;
+    margin-top: 3px; /* Align checkbox better with text */
+}
+
+ /* Style for radio buttons if needed */
+.radio-group label {
+    display: inline-block; /* Keep radios inline */
+    margin-right: 15px;
+    font-weight: normal; /* Normal weight for options */
+}
+ .radio-group input {
+     width: auto;
+     margin-right: 5px;
+ }
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Default: 3 columns */
+    gap: 20px;
+    margin-bottom: 20px; /* Keep spacing */
+}
+
+/* --- START: ADDED CSS FIX --- */
+/* Override grid columns for the row with 4 items */
+#ext-bdate-age-sex-row {
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Define 4 columns */
+}
+
+/* Override grid columns for the row with 2 items */
+#pob-tongue-row {
+    grid-template-columns: 1fr 1fr; /* Define 2 columns */
+}
+/* --- END: ADDED CSS FIX --- */
+
+
+/* Center the submit button */
+.submit-button-container {
+    grid-column: span 3; /* Make container span full width */
+    text-align: center; /* Center the button within the container */
+    margin-top: 20px; /* Add space above the button */
+}
+
+.submit-button {
+    background-color: var(--kinderly-button-bg);
+    color: var(--kinderly-button-text);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    /* Remove display: block and margin: auto as centering is handled by container */
+    min-width: 200px;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+    display: inline-block; /* Needed for centering in text-align container */
+}
+
+.submit-button:hover {
+    background-color: #016897;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(1, 39, 97, 0.3);
+}
+
+/* Back Link Styling */
+.back-link-container {
+     grid-column: span 3;
+     text-align: center;
+     margin-top: 15px;
+}
+
+.back-link {
+    color: var(--kinderly-primary-green);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+    color: var(--kinderly-form-highlight);
+}
+
+
+/* Messages */
+.success-message, .error-message {
+    display: none;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+    grid-column: span 3; /* Span full width */
+}
+
+.success-message {
+    background-color: rgba(0, 180, 79, 0.1);
+    color: var(--kinderly-primary-green);
+    border: 1px solid var(--kinderly-primary-green);
+}
+
+.error-message {
+    background-color: rgba(255, 127, 127, 0.1);
+    color: var(--kinderly-accent-pink);
+    border: 1px solid var(--kinderly-accent-pink);
+}
+
+/* ... (Keep existing footer styles) ... */
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .enrollment-form {
+        grid-template-columns: 1fr 1fr; /* Adjust grid for medium screens */
+    }
+     /* Adjust spans for medium screens */
+     .form-section, .form-group.full-width, .submit-button-container, .back-link-container, .success-message, .error-message {
+        grid-column: span 2;
+    }
+     .form-group.half-width {
+         grid-column: span 1; /* Make half-width take one column */
+     }
+     /* Adjust form rows for medium screens - make them stack if needed or keep 2 columns */
+     .form-row {
+         grid-template-columns: 1fr 1fr; /* Default to 2 columns on medium */
+     }
+     #ext-bdate-age-sex-row {
+         grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 items become 2x2 */
+     }
+     #pob-tongue-row {
+         grid-template-columns: 1fr 1fr; /* Stays 2 columns */
+     }
+
+}
+
+@media (max-width: 768px) {
+     /* ... (Keep existing general responsive styles) ... */
+    .enrollment-form {
+        grid-template-columns: 1fr; /* Single column layout for small screens */
+    }
+     /* Adjust spans for small screens */
+    .form-section, .form-group.full-width, .form-group.half-width, .submit-button-container, .back-link-container, .success-message, .error-message {
+         grid-column: span 1;
+     }
+     /* Force all form rows to single column on small screens */
+    .form-row,
+    #ext-bdate-age-sex-row,
+    #pob-tongue-row {
+        grid-template-columns: 1fr; /* Stack elements in form rows */
+    }
+}
+
+/* Disability checkbox sub-options styling */
+.disability-checkboxes .disability-category {
+    margin-bottom: 10px;
+}
+.disability-checkboxes .sub-options {
+    padding-left: 25px; /* Indent sub-options */
+    margin-top: 5px;
+}
+.disability-checkboxes .sub-option {
+     font-weight: normal;
+     font-size: 0.9em;
+}
+.disability-checkboxes .sub-option input {
+    margin-top: 1px; /* Adjust alignment */
+}
+div.form-section ul.upload-requirements-list {
+    padding-left: 0; 
+    margin-left: 0;  
+    list-style-position: inside; 
+    margin-bottom: 1rem; 
+}
+
+.enrollment-instructions ul {
+    list-style-position: outside; /* Key for proper bullet alignment */
+    padding-left: 20px;         /* Adjust indentation as needed */
+    margin-left: 0;             /* Resets browser default margin */
+}
+
+.enrollment-instructions ul li {
+    padding-left: 5px; /* Small space between bullet and text */
+    margin-bottom: 5px; /* Space between list items */
+}
+
+/* Styles for the privacy modal - designed to integrate with enrollment.css variables */
+/* Ensure your :root variables from enrollment.css are accessible or replace them here */
+.privacy-modal .modal-content {
+  border-radius: 15px; /* Match enrollment-container from enrollment.css */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border: 1px solid var(--kinderly-border-color, #d0d9e8); /* Use variable or fallback */
+  background-color: var(--kinderly-light-accent-bg, #f7fbff); /* Match form container bg */
+}
+
+.privacy-modal .modal-header {
+  background-color: var(--kinderly-primary-green, #00b44f); /* Main theme green */
+  color: var(--kinderly-button-text, white); /* Text color for header, assuming white */
+  border-bottom: none;
+  padding: 1rem 1.5rem;
+  border-top-left-radius: 14px; /* Slightly less than content for border */
+  border-top-right-radius: 14px;
+}
+
+.privacy-modal .modal-header .modal-title {
+    font-weight: bold;
+    font-size: 1.15rem; /* Adjust as needed */
+}
+
+.privacy-modal .modal-body {
+  max-height: 65vh; /* Adjust as needed, allows scrolling for more content */
+  overflow-y: auto;
+  padding: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--kinderly-text, #0a0a23); /* Main text color */
+}
+
+.privacy-modal .modal-body h5 { /* Subheadings within the modal */
+    color: var(--kinderly-form-highlight, #001f54); /* A highlight color from your theme */
+    font-weight: bold;
+    margin-top: 1.25rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid var(--kinderly-accent-yellow, #ffc843); /* Accent color */
+}
+
+ .privacy-modal .modal-body a { /* Style links within modal body */
+    color: var(--kinderly-primary-green, #00b44f);
+    text-decoration: underline;
+}
+.privacy-modal .modal-body a:hover {
+    color: var(--kinderly-form-highlight, #001f54);
+}
+
+.privacy-modal .modal-footer {
+  border-top: 1px solid var(--kinderly-border-color, #d0d9e8);
+  background-color: var(--kinderly-light-accent-bg, #f7fbff); /* Consistent with modal content */
+  padding: 1rem 1.5rem;
+  display: flex; /* Added for better button alignment */
+  justify-content: flex-end; /* Align buttons to the right */
+}
+
+.privacy-modal .btn-primary-custom { /* For the 'Continue' button */
+    background-color: var(--kinderly-button-bg, #00c853); /* Your main button green */
+    color: var(--kinderly-button-text, #ffffff); /* Your button text color */
+    border: none;
+    padding: 0.5rem 1.25rem; /* Adjust padding */
+    font-size: 0.9rem; /* Adjust font size */
+    font-weight: bold;
+    border-radius: 50px; /* Match .submit-button style from enrollment.css */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.privacy-modal .btn-primary-custom:hover {
+    background-color: #00a040; /* A slightly darker shade of your button bg */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.privacy-modal .btn-secondary-custom { /* For the 'Cancel' button */
+    border-radius: 50px;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-right: 0.5rem; /* Space between buttons */
+}
+
+/* Add this class to the div that wraps your main enrollment form */
+/* You will toggle this class with JavaScript */
+#enrollmentFormContainer.disabled-form {
+    opacity: 0.4;
+    pointer-events: none; /* Prevents any interaction with the form */
+    filter: blur(2px); /* Optional: adds a visual blur effect */
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+#enrollmentFormContainer { /* Default state of the form container */
+    opacity: 1;
+    pointer-events: auto;
+    filter: blur(0px);
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+
+.error-text {
+    color: #dc3545; /* Bootstrap's danger color */
+    font-size: 0.875em; /* Smaller text for errors */
+    display: block; /* Ensure it takes its own line */
+    margin-top: .25rem; /* Space above the error message */
+}
+
+input.input-error, 
+select.input-error, 
+textarea.input-error { 
+    border-color: #dc3545 !important; 
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25) !important; 
+}
+
+    /* Styles for the privacy modal - to be integrated with enrollment.css variables */
+    .privacy-modal .modal-content {
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      border: 1px solid var(--kinderly-border-color, #d0d9e8);
+      background-color: var(--kinderly-light-accent-bg, #f7fbff);
+    }
+    .privacy-modal .modal-header {
+      background-color: var(--kinderly-primary-green, #00b44f);
+      color: var(--kinderly-button-text, white);
+      border-bottom: none;
+      padding: 1rem 1.5rem;
+      border-top-left-radius: 14px;
+      border-top-right-radius: 14px;
+    }
+    .privacy-modal .modal-header .modal-title {
+        font-weight: bold;
+        font-size: 1.15rem;
+    }
+    .privacy-modal .modal-body {
+      max-height: 65vh;
+      overflow-y: auto;
+      padding: 1.5rem;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--kinderly-text, #0a0a23);
+    }
+    .privacy-modal .modal-body h5 {
+        color: var(--kinderly-form-highlight, #001f54);
+        font-weight: bold;
+        margin-top: 1.25rem;
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.25rem;
+        border-bottom: 2px solid var(--kinderly-accent-yellow, #ffc843);
+    }
+     .privacy-modal .modal-body a {
+        color: var(--kinderly-primary-green, #016897);
+        text-decoration: underline;
+    }
+    .privacy-modal .modal-body a:hover {
+        color: var(--kinderly-form-highlight, #001f54);
+    }
+    .privacy-modal .modal-footer {
+      border-top: 1px solid var(--kinderly-border-color, #d0d9e8);
+      background-color: var(--kinderly-light-accent-bg, #f7fbff);
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .privacy-modal .btn-primary-custom {
+        background-color: var(--kinderly-button-bg, #00c853);
+        color: var(--kinderly-button-text, #ffffff);
+        border: none;
+        padding: 0.6rem 1.5rem;
+        font-weight: bold;
+        border-radius: 50px; /* Match .submit-button style from enrollment.css */
+        transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .privacy-modal .btn-primary-custom:hover {
+        background-color: #016897; /* Darker shade */
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    .privacy-modal .btn-secondary-custom {
+        border-radius: 50px;
+        padding: 0.6rem 1.5rem;
+        font-weight: bold;
+        margin-right: 0.5rem;
+    }
+
+    #enrollmentFormWrapper.disabled-form {
+        opacity: 0.4;
+        pointer-events: none;
+        filter: blur(2px);
+        transition: opacity 0.3s ease, filter 0.3s ease;
+    }
+    #enrollmentFormWrapper {
+        opacity: 1;
+        pointer-events: auto;
+        filter: blur(0px);
+        transition: opacity 0.3s ease, filter 0.3s ease;
+    }
+    body {
+         background-color: var(--kinderly-bg);
+    }
+    /* Basic styling for error messages and input highlighting */
+    .error-text {
+        color: red;
+        font-size: 0.85em;
+        display: block; /* Ensure it takes its own line */
+        margin-top: 3px;
+    }
+    input.input-error, select.input-error {
+        border-color: red !important;
+        box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.15) !important;
+    }

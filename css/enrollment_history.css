@@ -1,0 +1,165 @@
+/* css/enrollment_history.css */
+
+.page-title { /* Style from dashboard.css */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--primary-blue); /* Assuming var(--primary-blue) is defined */
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--accent-yellow); /* Assuming var(--accent-yellow) is defined */
+    display: inline-block; /* Make border only as wide as text */
+}
+
+.section-title { /* New style for the "Enrolled Students..." H3 */
+    font-size: 1.4rem;
+    color: var(--primary-blue); /* Assuming var(--primary-blue) is defined */
+    margin-top: 25px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--accent-yellow); /* Assuming var(--accent-yellow) is defined */
+    display: inline-block;
+}
+
+
+/* Accordion Styling */
+.accordion-item {
+    border: 1px solid #dee2e6; /* Bootstrap default border */
+    border-radius: .375rem; /* Bootstrap default radius */
+}
+/* Accordion header uses default Bootstrap styling */
+.accordion-button {
+    font-weight: 600;
+     background-color: #f8f9fa; /* Light grey background for collapsed button */
+     color: #495057; /* Darker text */
+}
+.accordion-button:not(.collapsed) {
+    background-color: #e0e7ff; /* Lighter blue when open - matching grade header */
+    color: var(--primary-blue); /* Use theme blue */
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.125); /* Default Bootstrap shadow */
+}
+.accordion-button:focus {
+     box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, .25); /* Standard focus */
+}
+.accordion-body {
+    padding: 1rem 1.25rem; /* Standard Bootstrap padding */
+}
+
+/* Remove old grade header style */
+/*
+.grade-level-header { ... }
+*/
+
+/* Table Styling (can reuse from dashboard.css or redefine) */
+.table-container { margin-top: 0; } /* Remove top margin if table is directly in accordion */
+
+.data-table th, .data-table td {
+    vertical-align: middle;
+    font-size: 0.9rem;
+}
+
+.action-buttons button, .action-buttons a {
+    margin-right: 5px;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+}
+
+/* Modal specific styles (Keep these) */
+.modal-body-scrollable {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+#viewHistoryModal .table th,
+#viewHistoryModal .table td {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+    vertical-align: middle;
+}
+#viewHistoryModal .action-buttons button,
+#viewHistoryModal .action-buttons a {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.75rem;
+    margin-right: 3px;
+    white-space: nowrap;
+}
+.form-label-sm {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+    font-weight: bold;
+}
+.form-control-sm, .form-select-sm {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
+}
+.edit-form {
+    border-top: 1px dashed #ccc;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    background-color: #f8f9fa;
+}
+.edit-form h6 {
+    margin-bottom: 0.8rem;
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+.edit-form .action-buttons {
+    padding-top: 0.5rem;
+}
+
+/* Ensure modals are above the backdrop */
+#addHistoryModal,
+#viewHistoryModal {
+  z-index: 1060; /* Higher than backdrop */
+}
+
+.modal-backdrop {
+  z-index: 1050; /* Standard backdrop index */
+}
+
+/* Optional: Ensure modal content is above modal dialog if needed, though usually not required */
+/*
+.modal-content {
+  position: relative;
+  z-index: 1061;
+}
+*/
+
+/* Add these styles to css/enrollment_history.css */
+
+/* Styling for Accordion inside View History Modal */
+#viewHistoryModal .modal-body .accordion {
+    margin-top: 1rem; /* Add some space above the accordion */
+}
+
+#viewHistoryModal .modal-body .accordion-item {
+    background-color: #f8f9fa; /* Light background for items */
+    border: 1px solid #dee2e6;
+    margin-bottom: 0.5rem; /* Space between grade level sections */
+}
+
+#viewHistoryModal .modal-body .accordion-button {
+    background-color: #e9ecef; /* Header background */
+    font-weight: 600;
+    font-size: 0.95rem; /* Slightly smaller header text */
+    padding: 0.75rem 1rem; /* Adjust padding */
+}
+
+#viewHistoryModal .modal-body .accordion-button:not(.collapsed) {
+    background-color: #dbeafe; /* Lighter blue when open */
+    color: #0d6efd;
+}
+
+#viewHistoryModal .modal-body .accordion-body {
+    padding: 0.5rem 0.5rem 1rem 0.5rem; /* More compact padding */
+    background-color: #ffffff; /* White background for table area */
+}
+
+#viewHistoryModal .modal-body .accordion-body .table {
+    margin-bottom: 0; /* Remove bottom margin from table inside */
+}
+
+/* Adjust action button size within the modal's accordion table */
+#viewHistoryModal .accordion-body .action-buttons .btn {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.75rem;
+}
+

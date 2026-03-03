@@ -1,0 +1,654 @@
+html {
+    font-size: 100%;
+}
+
+.navbar-brand img {
+  height: 85px; /* Or whatever size you want */
+  width: auto;  /* Keeps aspect ratio */
+  transform: translateX(2px);
+  
+}
+
+.navbar {
+    position: sticky; /* Makes the navbar sticky */
+    top: 0;           /* Sticks to the top when scrolled past */
+    width: 100%;
+    z-index: 1030;
+    /* Keep your existing background-color, padding, etc. */
+    background-color: #fffdf8 !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional */
+}
+.welcome-text-content-exact{
+  color:red;
+} 
+
+.fw-bold{ /*announcement header*/
+  color: white;
+}
+
+.fw-bolddd{ /*why choose monte cristo*/
+  color: black;
+}
+
+.fw-boldddd{ /*our activities text*/
+  color: black;
+}
+
+    body {
+      font-family: 'Poppins';
+      background-color: #fffdf8;
+      color: #001133;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .decorative-icon {
+      position: absolute;
+      z-index: 0;
+      font-size: 1.5rem;
+      opacity: 0.6;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .icon1 { top: 40px; left: 30px; color: #00c66b; font-size: 1.2rem; }
+    .icon2 { top: 100px; right: 40px; color: #ff6666; font-size: 1.4rem; }
+    .icon3 { top: 200px; left: 50%; transform: translateX(-50%); color: #fca503; }
+    .icon4 { bottom: 120px; left: 60px; color: #6495ed; }
+    .icon5 { bottom: 30px; right: 90px; color: #ffb347; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .btn-custom {
+      padding: 10px 20px;
+      border: 2px solid #001133;
+      border-radius: 8px;
+      font-weight: bold;
+      background: none;
+      color: #001133;
+      transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    }
+    .btn-custom:not(.explore):hover { 
+      color: #ffffff;
+      background-color: #001133; 
+      border-color: #001133;
+    }
+    .btn-custom.explore {
+      background-color: #016897;
+      color: white;
+      border: none;
+    }
+    .hero-text h1 {
+      font-size: 2.8rem; /* Slightly smaller for better fit */
+      font-weight: 900; /* Nunito Black */
+      line-height: 1.2;
+      margin-bottom: 1rem; /* Added some space below h1 */
+      color: #00264d; /* Dark blue from image */
+    }
+
+    .hero-text h1 strong {
+      color: #00264d; /* Dark blue from image */
+      font-weight: 900; /* Ensure strong is also Nunito Black */
+    }
+
+    .hero-text p {
+      font-size: 1.1rem; /* Slightly larger for readability */
+      color: #555; /* Softer black */
+      margin-bottom: 1.5rem; /* Space before buttons */
+    }
+      .hero-text .container.mt-5 {
+      margin-left: 0; /* Align to the left of the hero text column */
+      padding-left: 0; /* Remove default container padding */
+    }
+    .stat {
+      font-weight: bold;
+    }
+    .stat-item {
+      display: flex;
+      flex-direction: column; /* Stack icon and text vertically */
+      align-items: center;
+      text-align: center;
+      margin-top: 20px; /* Space above stat items */
+      margin-bottom: 20px; /* Space below stat items */
+    }
+    .stat-item .icon {
+      font-size: 2.5rem; /* Icon size */
+      margin-bottom: 0.5rem; /* Space between icon and text */
+    }
+
+    .stat-item span {
+      font-size: 1rem; /* Text size */
+      font-weight: bold;
+      color: #333; /* Dark grey text */
+    }
+    .stat-icon {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+    .scroll-banner {
+      background: #4a99a7;
+      color: white;
+      font-weight: 900;
+      overflow: hidden;
+      position: relative;
+      z-index: 2;
+      padding: 10px 0;
+    }
+
+    .scroll-text-wrapper {
+      display: flex;
+      animation: scroll-left 20s linear infinite;
+      white-space: nowrap;
+    }
+
+    .scroll-text {
+      display: inline-block;
+      padding-right: 50px;
+      text-transform: uppercase;
+      font-size: larger;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .section-peach {
+      background-color: #016897;
+      padding: 0;
+      text-align: center;
+      color: white;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-yellow {
+      background-color: #016897;
+      border-radius: 80px 80px 0 0;
+      padding: 60px 40px 120px;
+      margin-top: 40px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .section-welcome-area .container {
+  background-color: #f5f5f5; /* Replace with your desired color */
+  padding: 2rem; /* Optional: to give some spacing inside the container */
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+
+    .learning-paths {
+      background: white;
+      border-radius: 30px;
+      padding: 60px 20px;
+      margin-top: -100px;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    }
+
+    .learning-card {
+      background: #f7f7f7;
+      border-radius: 20px;
+      padding: 20px;
+      text-align: left;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+      height: 100%;
+    }
+
+    .learning-card h5 {
+      font-weight: 700;
+      color: #001133;
+    }
+    
+    .learning-card p {
+      font-size: 0.95rem;
+      color: #333;
+    }
+    .scroll-section.visible {
+  opacity: 1;
+}
+
+
+
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    background-color: #043472;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  #backToTop:hover {
+    background-color: #3491e9;
+  }
+
+  .floating-shape {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    animation: float 10s linear infinite;
+    opacity: 0.7;
+    z-index: 0;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(-40px) translateX(20px);
+    }
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+  }
+
+.rectangular-image {
+  width: 100%; 
+  height: 430px; 
+  object-fit: cover; 
+  opacity: 0.5; 
+  transition: opacity 0.3s ease-in-out;
+  margin-top: 60px;
+}
+
+.rectangular-image:hover {
+  opacity: 1; /* Fully visible on hover */
+}
+/* Styles for the "Exactly Like This" Welcome Section */
+.section-welcome-area {
+  background-color: #FFFBEB; /* A very light yellow/off-white for the broader section background, matching the image */
+  padding: 60px 0; /* Adjust overall section padding */
+  /* You might want to re-apply top rounded corners if this section replaces .section-yellow for that */
+  /* border-radius: 80px 80px 0 0; */
+}
+
+.welcome-block-exact {
+  display: flex;
+  align-items: center; /* Vertically center image and text content relative to each other */
+  background-color: #016897; /* The prominent yellow background from the "Kinderly" image */
+  border-radius: 30px;     /* Rounded corners for the yellow block */
+  padding: 30px 40px;      /* Padding inside the yellow block */
+  position: relative;      /* For positioning the icon */
+  max-width: 1100px;       /* Or adjust as needed */
+  margin: 0 auto 40px auto; /* Center the block and add margin below */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-image-container {
+  flex: 0 0 30%; /* Image container takes about 30% width */
+  margin-right: 30px; /* Space between image and text */
+  text-align: center; /* Center image if it's smaller than container */
+}
+
+.welcome-person-image-exact {
+  width: 100%; /* Make image responsive within its container */
+  max-width: 280px; /* Max width of the image */
+  height: auto;
+  border-radius: 20px 100px 100px 20px; /* Custom border-radius to match the "tab" look */
+  object-fit: cover;
+}
+
+.welcome-text-content-exact {
+  flex: 1; /* Text content takes the remaining space */
+  position: relative; /* For icon positioning if it was inside here, but it's relative to welcome-block-exact */
+  color: #ffffff; /* Default text color */
+}
+
+.welcome-text-content-exact h5 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ffffff; /* Lighter text for "Welcome to" */
+  margin-bottom: 0.25rem;
+}
+
+.welcome-text-content-exact h2 {
+  font-size: 2.2rem; /* Adjust size as needed */
+  font-weight: 700; /* Bold school name */
+  color: #ffffff; /* Dark color for school name */
+  margin-bottom: 1rem;
+}
+
+.welcome-text-content-exact p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #ffffff; /* Slightly softer black for paragraph */
+}
+
+.learn-more-link-exact {
+  font-weight: bold;
+  color: #ffffff; /* Dark color for the link */
+  text-decoration: none;
+}
+
+.learn-more-link-exact:hover {
+  text-decoration: underline;
+}
+
+.welcome-icon-exact {
+  position: absolute;
+  top: -15px;  /* Adjust to be slightly above the text block */
+  right: -5px; /* Adjust to be slightly outside or on the edge */
+  font-size: 3rem; /* Size of the lightning bolt */
+  color: #ffffff; /* Color of the icon */
+  transform: rotate(15deg); /* Optional: slight rotation */
+}
+
+/* Announcements carousel styles */
+.announcements-carousel-container { position: relative; padding: 10px 40px; }
+.announcements-viewport { overflow: hidden; }
+.announcements-track { gap: 20px; transition: transform 300ms ease; }
+.announcement-item { width: 340px; margin-right: 0; }
+.announcement-item .p-4 { height: 100%; }
+
+.announce-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: #016897;
+}
+.announce-prev { left: 12px; }
+.announce-next { right: 12px; }
+.announce-nav:active { transform: translateY(-50%) scale(0.98); }
+
+/* Responsive: make announcement items full width on small screens */
+@media (max-width: 768px) {
+  .announcement-item { width: calc(100% - 40px); }
+  .announcements-carousel-container { padding: 10px 20px; }
+}
+
+
+/* Remove or adjust .section-yellow if it's no longer needed for this specific block */
+/*
+.section-yellow {
+  background-color: #ffd24c;
+  border-radius: 80px 80px 0 0;
+  padding: 60px 40px 120px;
+  margin-top: 40px;
+  position: relative;
+  z-index: 2;
+}
+*/
+
+/* Ensure .learning-paths still looks good */
+.learning-paths {
+  background: white; /* As per your original styling for this part */
+  border-radius: 30px;
+  padding: 60px 20px;
+  margin-top: -60px; /* Pull it up to overlap the new section-welcome-area or adjust as needed */
+  position: relative;
+  z-index: 3; /* Ensure it's above */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .welcome-block-exact {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .welcome-image-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+    flex: 0 0 auto; /* Reset flex basis */
+  }
+  .welcome-person-image-exact {
+    max-width: 220px; /* Smaller image on tablets */
+    border-radius: 20px; /* Simpler rounding for stacked layout */
+  }
+  .welcome-icon-exact {
+    top: 10px;
+    right: 10px;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .welcome-text-content-exact h2 {
+    font-size: 1.8rem;
+  }
+  .welcome-person-image-exact {
+    max-width: 180px; /* Even smaller image on phones */
+  }
+  .welcome-icon-exact {
+    font-size: 2rem;
+  }
+}
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .btn-custom {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .stat-item .icon {
+    font-size: 2rem;
+  }
+
+  .stat-item span {
+    font-size: 0.9rem;
+  }
+
+  .hero-text .container.mt-5 {
+    padding-left: 15px; /* Add back some padding on small screens if needed */
+    padding-right: 15px;
+  }
+  .hero-text .row.text-center .col-md-3.col-6:first-child,
+  .hero-text .row.text-center .col-md-3.col-6:last-child {
+      display: none; /* Hide spacer columns on smaller screens to center stats */
+  }
+  .hero-text .row.text-center .col-md-3.col-6 {
+      flex: 0 0 50%; /* Make stat items take 50% width on small screens */
+      max-width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+    .d-flex.flex-wrap.gap-2 {
+        justify-content: center; /* Center buttons on very small screens */
+    }
+    .hero-text .row.text-center .col-md-3.col-6 {
+      flex: 0 0 100%; /* Stack stat items on very small screens */
+      max-width: 100%;
+      margin-bottom: 1rem; /* Add space between stacked items */
+  }
+}
+
+/* Parents Feedback Section */
+.feedback-card {
+  background-color: #fff; /* Or var(--kinderly-light-accent-bg) if you prefer */
+  border: 1px solid var(--kinderly-border-color, #e0e0e0);
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.feedback-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.feedback-profile-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 3px solid var(--kinderly-primary-green, #00b44f);
+}
+
+.feedback-profile-placeholder i {
+  font-size: 50px; /* Adjust icon size as needed */
+  color: var(--kinderly-border-color, #ccc);
+}
+
+.feedback-text {
+  font-style: italic;
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  min-height: 80px; /* Give some minimum height for consistency */
+}
+
+.feedback-author {
+  font-weight: 600;
+  color: var(--kinderly-primary-green, #00b44f);
+  font-size: 1rem;
+}
+
+.feedback-rating .fa-star {
+  font-size: 1.1rem;
+}
+
+.feedback-rating .text-warning { /* Star color */
+  color: var(--kinderly-accent-yellow, #4a99a7) !important;
+}
+.feedback-rating .text-muted { /* Empty star color */
+  color: #d0d9e8 !important;
+}
+
+/* Add these styles to css/index.css */
+
+.feedback-carousel-container {
+  /* Container for the viewport and buttons */
+  /* position: relative; -- Already added inline for buttons */
+  padding-left: 40px; /* Space for prev button */
+  padding-right: 40px; /* Space for next button */
+  max-width: 100%; /* Ensure it doesn't overflow the main page container excessively */
+  margin: 0 auto; /* Center it if it's narrower than its parent */
+}
+
+.feedback-slider-viewport {
+  /* overflow: hidden; -- Already added inline */
+  width: 100%;
+}
+
+.feedback-slider-track {
+  /* display: flex; -- Already added inline */
+  transition: transform 0.5s ease-in-out; /* Smooth sliding animation */
+  /* The width of this track will be set by JavaScript based on the number of items */
+}
+
+.feedback-card-item {
+  flex: 0 0 calc(100% / 3); /* Shows 3 items by default on larger screens */
+  max-width: calc(100% / 3);
+  box-sizing: border-box;
+  /* padding: 0 10px; /* Spacing between cards, handled by mx-2 on card itself */
+}
+
+/* Styling for the Prev/Next Buttons */
+.feedback-prev-btn,
+.feedback-next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.feedback-prev-btn:hover,
+.feedback-next-btn:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.feedback-prev-btn {
+  left: -10px; /* Position outside the main feedback content area */
+}
+
+.feedback-next-btn {
+  right: -10px; /* Position outside the main feedback content area */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 100%, 100%;
+  width: 20px; /* Adjust icon size */
+  height: 20px; /* Adjust icon size */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 991.98px) { /* Medium devices (tablets) */
+  .feedback-card-item {
+    flex: 0 0 50%; /* Shows 2 items */
+    max-width: 50%;
+  }
+  .feedback-carousel-container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .feedback-prev-btn { left: -5px; }
+  .feedback-next-btn { right: -5px; }
+}
+
+@media (max-width: 767.98px) { /* Small devices (landscape phones) */
+  .feedback-card-item {
+    flex: 0 0 100%; /* Shows 1 item */
+    max-width: 100%;
+  }
+  .feedback-carousel-container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .feedback-prev-btn { left: 0; }
+  .feedback-next-btn { right: 0; }
+
+  .feedback-prev-btn, .feedback-next-btn {
+    width: 35px;
+    height: 35px;
+  }
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+

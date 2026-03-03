@@ -1,0 +1,125 @@
+/* css/edit_news.css */
+:root {
+    --primary-blue: #0000CD;
+    --accent-yellow: #FFD700;
+    --accent-green: #228B22;
+    --white: #FFFFFF;
+    --gray: #f5f5f5;
+    --dark-gray: #444;
+    --medium-gray: #ddd;
+    --status-enrolled-bg: #e6f7f0;
+    --status-enrolled-text: #155724;
+    --status-enrolled-dot: #28a745;
+}
+
+html {
+    font-size: 112.5%;
+}
+
+body {
+  background-color: var(--gray);
+  font-family: 'Poppins';
+  margin: 0;
+  padding: 20px;
+  color: var(--dark-gray);
+}
+
+.page-container {
+  max-width: 700px;
+  margin: 20px auto;
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2.page-title {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: var(--primary-blue);
+  position: relative;
+  padding-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+h2.page-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: var(--accent-yellow);
+}
+
+.alert-success {
+    background-color: var(--status-enrolled-bg);
+    color: var(--status-enrolled-text);
+    border-color: var(--status-enrolled-dot);
+}
+
+.edit-form .form-label {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.edit-form .form-control,
+.edit-form .form-select {
+    border-color: var(--medium-gray);
+    border-radius: 5px;
+}
+.edit-form .form-control:focus,
+.edit-form .form-select:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 0.25rem rgba(0, 0, 205, 0.15);
+}
+.edit-form textarea.form-control {
+    min-height: 100px;
+}
+
+.image-preview-container {
+    margin-bottom: 1rem;
+}
+.image-preview {
+  max-width: 200px;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid var(--medium-gray);
+  padding: 4px;
+  margin-top: 5px;
+}
+
+.btn-submit-update {
+  background-color: var(--accent-green);
+  color: var(--white);
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.btn-submit-update:hover {
+  background-color: #1a6d1a;
+}
+.btn-submit-update i { margin-right: 8px; }
+
+
+.back-container {
+  text-align: center;
+  margin-top: 20px;
+}
+.btn-back {
+  display: inline-block;
+  background-color: var(--dark-gray);
+  color: var(--white);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  font-size: 0.9rem;
+}
+.btn-back:hover {
+  background-color: #333;
+}
+.btn-back i { margin-right: 8px; }

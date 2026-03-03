@@ -1,0 +1,466 @@
+html {
+    font-size: 112.5%; /* Base font size increased */
+}
+
+:root {
+    --kinderly-bg-light: #fffdf8;
+    --kinderly-text-dark: #001133;
+    --kinderly-text-dark-alt: #0a0a23;
+    --kinderly-green-primary: #016897;
+    --kinderly-green-secondary: #016897;
+    --kinderly-yellow-primary: #ffd24c;
+    --kinderly-pink-red-primary: #ff7f7f;
+    --kinderly-blue-accent: #001f54;
+    --kinderly-text-white: #FFFFFF;
+    --kinderly-border-soft: #d0d9e8;
+    --kinderly-input-bg: #f7fbff;
+    --kinderly-text-muted: #555555;
+    --kinderly-shadow-soft: rgba(0, 0, 0, 0.05);
+
+    --kinderly-status-approved-bg: #e6f4ea;
+    --kinderly-status-approved-dot: #1e8e3e;
+    --kinderly-status-approved-text: #0d652d;
+
+    --kinderly-status-pending-bg: #fff8e1;
+    --kinderly-status-pending-dot: #e57300;
+    --kinderly-status-pending-text: #a05200;
+
+    --kinderly-status-declined-bg: #fdecea;
+    --kinderly-status-declined-dot: #c73939;
+    --kinderly-status-declined-text: #a12d2d;
+
+    --kinderly-info-bg: #e9f5ff;
+    --kinderly-info-text: #004085;
+    --kinderly-info-border: #b8daff;
+}
+
+.navbar-brand img {
+  height: 85px; /* Or whatever size you want */
+  width: auto;  /* Keeps aspect ratio */
+  transform: translateX(2px);
+  
+}
+
+/* Styles specific to the Status Check page content */
+.status-check-main-section {
+    min-height: calc(100vh - 140px - 150px); /* Adjust if navbar/footer height changes */
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.status-check-container {
+    background-color: var(--kinderly-bg-light);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px var(--kinderly-shadow-soft);
+    border: 1px solid var(--kinderly-border-soft);
+    width: 100%;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.kinderly-main-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--kinderly-text-dark-alt);
+}
+
+.status-check-instructions {
+    color: var(--kinderly-text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.status-check-form .form-group label {
+    font-weight: 600;
+    color: var(--kinderly-text-dark-alt);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.status-check-form .form-control {
+    border: 1px solid var(--kinderly-border-soft);
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    background-color: var(--kinderly-input-bg);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.status-check-form .form-control:focus {
+    border-color: var(--kinderly-green-primary);
+    box-shadow: 0 0 0 0.2rem rgba(0, 180, 79, 0.15);
+    outline: none;
+    background-color: var(--kinderly-text-white);
+}
+
+.btn-custom-kinderly.explore {
+    background-color: var(--kinderly-green-secondary);
+    color: var(--kinderly-text-white);
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.btn-custom-kinderly.explore:hover {
+    background-color: var(--kinderly-green-primary);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 23, 60, 0.65); /* Darker overlay for better focus */
+    z-index: 1050;
+    display: none; /* JS controls this: display: flex; to show */
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    overflow-y: auto; /* Allows scrolling if modal content is too tall */
+}
+
+/* Modal Content Box */
+.modal-content-viewer {
+    background-color: var(--kinderly-bg-light, #fffdf8);
+    padding: 0; /* Remove padding to let sections handle it */
+    border: none; /* Removed border, rely on shadow */
+    border-radius: 12px;
+    width: 90%;
+    max-width: 750px; /* Wider for two columns */
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2); /* Softer, larger shadow */
+    position: relative;
+    animation: fadeInModal 0.35s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother animation */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes fadeInModal {
+    from {opacity: 0; transform: translateY(-25px) scale(0.97);}
+    to {opacity: 1; transform: translateY(0) scale(1);}
+}
+
+.modal-close-button {
+    color: var(--kinderly-text-muted, #aaa);
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    transition: color 0.2s ease;
+    z-index: 10;
+}
+.modal-close-button:hover,
+.modal-close-button:focus {
+    color: var(--kinderly-pink-red-primary, #ff7f7f); /* Themed hover color */
+}
+#modalStatusContent {
+    padding: 30px 35px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* Styles for actual content inside the modal's #modalStatusContent div */
+#modalStatusContent h3 {
+    font-size: 1.75rem;
+    color: var(--kinderly-green-primary);
+    margin-bottom: 1.5rem; /* More space */
+    font-weight: 700;
+    border-bottom: 2px solid var(--kinderly-green-secondary);
+    padding-bottom: 0.75rem;
+    text-align: center;
+}
+
+#modalStatusContent p {
+    font-size: 1.05rem; /* Slightly larger paragraph text */
+    line-height: 1.75;
+    margin-bottom: 0.75rem; /* More space between lines */
+    color: var(--kinderly-text-dark);
+}
+
+#modalStatusContent p strong {
+    color: var(--kinderly-text-dark-alt);
+    font-weight: 600;
+    margin-right: 0.5em;
+    display: inline-block;
+    min-width: 120px; /* For label alignment */
+}
+
+/* Add or replace these styles in your css/results.css file */
+
+#modalStatusContent .status-pill {
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1.2;
+    text-transform: capitalize;
+    vertical-align: middle;
+}
+#modalStatusContent .status-pill::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+#modalStatusContent .status-pill.status-pending {
+    background-color: var(--kinderly-status-pending-bg);
+    color: var(--kinderly-status-pending-text);
+}
+#modalStatusContent .status-pill.status-pending::before {
+     background-color: var(--kinderly-status-pending-dot);
+}
+
+#modalStatusContent .status-pill.status-Approved {
+    background-color: var(--kinderly-status-approved-bg);
+    color: var(--kinderly-status-approved-text);
+}
+#modalStatusContent .status-pill.status-Approved::before {
+     background-color: var(--kinderly-status-approved-dot);
+}
+
+#modalStatusContent .status-pill.status-Declined {
+    background-color: var(--kinderly-status-declined-bg);
+    color: var(--kinderly-status-declined-text);
+}
+#modalStatusContent .status-pill.status-Declined::before {
+     background-color: var(--kinderly-status-declined-dot);
+}
+
+#modalStatusContent .status-pill.status-unknown {
+    background-color: var(--kinderly-info-bg);
+    color: var(--kinderly-info-text);
+    border: 1px solid var(--kinderly-info-border);
+}
+#modalStatusContent .status-pill.status-unknown::before {
+     background-color: var(--kinderly-info-text);
+}
+
+/* Styles for generic messages (loading, error, not-found) inside the modal */
+#modalStatusContent .modal-message-generic {
+    padding: 20px; /* More padding for these messages */
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 8px; /* Match other elements */
+    line-height: 1.6;
+}
+
+#modalStatusContent .modal-message-error {
+    color: var(--kinderly-status-declined-text);
+    background-color: var(--kinderly-status-declined-bg);
+    border: 1px solid var(--kinderly-status-declined-dot);
+}
+
+#modalStatusContent .modal-message-not-found {
+    color: var(--kinderly-text-dark-alt); /* Changed to a less alarming color */
+    background-color: var(--kinderly-info-bg);
+    border: 1px solid var(--kinderly-info-border);
+}
+
+#modalStatusContent .modal-message-loading {
+    color: var(--kinderly-text-muted);
+    font-style: italic;
+    background-color: transparent; /* No background for loading message */
+    border: none;
+}
+
+/* --- Modal Pagination --- */
+.modal-page {
+    display: none; /* Hide all pages by default */
+    animation: fadeInPage 0.4s ease-in-out;
+}
+
+.modal-page.active {
+    display: block; /* Show only the active page */
+}
+
+@keyframes fadeInPage {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-navigation {
+    padding: 15px 25px;
+    border-top: 1px solid var(--kinderly-border-soft);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+#modal-page-indicator {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+}
+
+/* New Section Styles */
+.financial-section, .payment-section, .subjects-section {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--kinderly-border-soft);
+}
+
+.financial-section h4, .payment-section h4, .subjects-section h4 {
+    font-size: 1.25rem;
+    color: var(--kinderly-text-dark-alt);
+    margin-bottom: 1rem;
+}
+
+.financial-section .balance {
+    font-weight: bold;
+    color: var(--kinderly-pink-red-primary);
+}
+
+.payment-section ul {
+    list-style-position: inside;
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+
+.subjects-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.subjects-table th,
+.subjects-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--kinderly-border-soft);
+}
+
+.subjects-table thead th {
+    background-color: var(--kinderly-input-bg);
+    font-weight: 600;
+}
+
+.subjects-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* --- NEW RESPONSIVE PAYMENT SECTION --- */
+.payment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.online-payment-col, .manual-payment-col {
+    padding: 20px;
+    background-color: var(--kinderly-input-bg);
+    border-radius: 10px;
+    border: 1px solid var(--kinderly-border-soft);
+}
+
+.online-payment-col h5, .manual-payment-col h5 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--kinderly-blue-accent);
+    margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .status-check-main-section {
+        padding: 2rem 1rem;
+    }
+    .modal-content-viewer {
+        padding: 0; 
+        max-width: 95%;
+    }
+    #modalStatusContent {
+        padding: 20px 25px;
+    }
+    .kinderly-main-title {
+        font-size: 1.8rem;
+    }
+    #modalStatusContent h3 {
+        font-size: 1.4rem; /* Adjusted modal title for mobile */
+    }
+    #modalStatusContent p strong {
+        min-width: 100px; /* Adjust label alignment for smaller screens */
+    }
+    .payment-grid {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+        gap: 20px;
+    }
+}
+
+/* Add these styles to the end of css/results.css */
+
+.subjects-section {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--kinderly-border-soft);
+}
+
+.subjects-section h4 {
+    font-size: 1.25rem;
+    color: var(--kinderly-text-dark-alt);
+    margin-bottom: 1rem;
+}
+
+.subjects-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.subjects-table th,
+.subjects-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--kinderly-border-soft);
+}
+
+.subjects-table thead th {
+    background-color: var(--kinderly-input-bg);
+    font-weight: 600;
+}
+
+.subjects-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.btn-download-cor {
+    background-color: var(--kinderly-blue-accent);
+    color: var(--kinderly-text-white);
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download-cor:hover {
+    background-color: #00163f; /* Darker blue */
+    color: var(--kinderly-text-white);
+}

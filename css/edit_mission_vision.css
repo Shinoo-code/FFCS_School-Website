@@ -1,0 +1,131 @@
+/* Refined: School Website 1/css/edit_mission_vision.css */
+:root {
+    --primary-blue: #0000CD;
+    --accent-yellow: #FFD700;
+    --accent-green: #228B22;
+    --white: #FFFFFF;
+    --gray: #f5f5f5;
+    --dark-gray: #444;
+    --medium-gray: #ddd;
+    --status-enrolled-bg: #e6f7f0;
+    --status-enrolled-text: #155724;
+    --status-enrolled-dot: #28a745;
+}
+
+html {
+    font-size: 112.5%;
+}
+
+body {
+  background-color: var(--gray);
+  font-family: 'Poppins';
+  color: var(--dark-gray);
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 750px;
+  margin: 20px auto;
+  padding: 25px;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2.text-center {
+  font-size: 1.8rem;
+  color: var(--primary-blue);
+  margin-bottom: 25px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 10px;
+}
+h2.text-center::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: var(--accent-yellow);
+}
+
+.alert-success {
+    background-color: var(--status-enrolled-bg);
+    color: var(--status-enrolled-text);
+    border-color: var(--status-enrolled-dot);
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 12px 18px;
+    margin-bottom: 20px;
+}
+
+.form-label { /* Bootstrap */
+    font-weight: bold; /* Already bold */
+    color: var(--dark-gray);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-control { /* Bootstrap for textarea */
+    border: 1px solid var(--medium-gray);
+    border-radius: 5px;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 150px; /* Increased height for mission/vision */
+    resize: vertical;
+}
+.form-control:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(0, 0, 205, 0.1);
+    outline: none;
+}
+.mb-3 { /* Bootstrap margin */
+    margin-bottom: 1.5rem !important;
+}
+
+/* Targeting Bootstrap button directly or use a custom class */
+button[type="submit"].btn-success,
+button[type="submit"].btn-save-changes { /* Example custom class */
+  display: block;
+  margin: 10px auto 0 auto; /* Added top margin and centered */
+  background-color: var(--accent-green);
+  border-color: var(--accent-green);
+  color: var(--white);
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  width: fit-content; /* Button width fits content */
+}
+
+button[type="submit"].btn-success:hover,
+button[type="submit"].btn-save-changes:hover {
+  background-color: #1a6d1a;
+  border-color: #1a6d1a;
+}
+
+.back-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-back {
+  display: inline-block;
+  background-color: var(--dark-gray);
+  color: var(--white);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  font-size: 0.9rem;
+}
+.btn-back:hover {
+  background-color: #333;
+}

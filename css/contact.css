@@ -1,0 +1,139 @@
+html {
+    font-size: 112.5%; /* Base font size increased */
+}
+.navbar-brand img {
+  height: 85px; /* Or whatever size you want */
+  width: auto;  /* Keeps aspect ratio */
+  transform: translateX(2px);
+  
+}
+
+    body {
+      background-color: #fdfcf6;
+      font-family: 'Poppins';
+      overflow-x: hidden;
+    }
+    
+    .contact-us-section h2 {
+      font-weight: bold;
+    }
+
+    .btn-outline-dark {
+        background-color: #fff;
+      border: 1px solid #001f54;
+      color: #001f54;
+      font-size: 0.9rem;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-weight: bold;
+
+    }
+    .info-box {
+      background: #f7faff;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+      border: 2px solid #ccc;
+    }
+    .text-center{
+      color: white;
+    }
+    .info-box i {
+      background: #016897;
+      padding: 15px;
+      border-radius: 50%;
+      color: white;
+      margin-bottom: 10px;
+    }
+    .locations-section {
+      background-color: #016897;
+      padding: 60px 0;
+      border-top-left-radius: 100px;
+      border-top-right-radius: 100px;
+      position: relative;
+    }
+    .map-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+    .map-card iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 15px;
+    }
+    .floating-shape {
+      position: absolute;
+      animation: float 10s linear infinite;
+      z-index: 0;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    #backToTop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    background-color: #043472;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  #backToTop:hover {
+    background-color: #3491e9;
+  }
+
+  .floating-shape {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    animation: float 10s linear infinite;
+    opacity: 0.7;
+    z-index: 0;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(-40px) translateX(20px);
+    }
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+  }
+    .rectangular-image {
+  width: 98.9vw; /* Full width of the viewport */
+  height: 430px; /* Adjust the height as needed */
+  object-fit: cover; /* Ensure the image covers the entire width */
+  opacity: 0.5; /* Make the image slightly transparent */
+  transition: opacity 0.3s ease-in-out;
+  margin-top: 60px;
+}
+
+.rectangular-image:hover {
+  opacity: 1; /* Fully visible on hover */
+}

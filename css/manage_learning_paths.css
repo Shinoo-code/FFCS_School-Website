@@ -1,0 +1,248 @@
+/* Refined: School Website 1/css/manage_learning_paths.css */
+:root {
+    --primary-blue: #0000CD;
+    --secondary-red: #FF0000;
+    --accent-yellow: #FFD700;
+    --accent-green: #228B22;
+    --white: #FFFFFF;
+    --light-blue: #E6E6FF;
+    --light-yellow: #FFFBE6;
+    --gray: #f5f5f5;
+    --dark-gray: #444;
+    --medium-gray: #ddd;
+    --status-enrolled-bg: #e6f7f0;
+    --status-enrolled-text: #155724;
+    --status-enrolled-dot: #28a745;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+  font-family: 'Poppins';
+  background-color: var(--gray);
+  padding: 20px;
+  color: var(--dark-gray);
+  margin:0;
+}
+
+.page-container { /* Wrapper for content */
+  max-width: 960px;
+  margin: 20px auto;
+  background-color: var(--white);
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.page-container:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+h2.text-center {
+  font-size: 1.95rem;
+  color: var(--primary-blue);
+  margin-bottom: 28px;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+h2.text-center::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 4px;
+    background-color: var(--accent-yellow);
+    border-radius: 2px;
+}
+
+form {
+    margin-bottom: 30px;
+    padding: 26px;
+    background-color: var(--light-blue);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 205, 0.08);
+    border: 1px solid rgba(0, 0, 205, 0.1);
+    transition: all 0.3s ease;
+}
+
+form:hover {
+  background-color: rgba(0, 0, 205, 0.03);
+  box-shadow: 0 4px 14px rgba(0, 0, 205, 0.12);
+}
+/* Using Bootstrap's row and col, so specific form layout CSS might be minimal */
+form .form-control { /* Target Bootstrap's form-control class */
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    padding: 11px 14px;
+    font-size: 0.95rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    background-color: var(--white);
+    transition: all 0.3s ease;
+}
+form .form-control:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(0, 0, 205, 0.1);
+    outline: none;
+    background-color: rgba(0, 0, 205, 0.02);
+}
+form label { /* For any labels outside Bootstrap structure */
+    font-weight: 600;
+    color: var(--primary-blue);
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    letter-spacing: -0.2px;
+}
+
+
+.add-learning-path-btn, /* Main form submit */
+button[type="submit"].btn-primary { /* For Bootstrap forms */
+  background-color: var(--accent-green);
+  color: var(--white);
+  border: none;
+  padding: 11px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 15px auto 0 auto;
+  width: fit-content;
+  box-shadow: 0 3px 10px rgba(34, 139, 34, 0.3);
+}
+.add-learning-path-btn:hover,
+button[type="submit"].btn-primary:hover {
+  background-color: #1a6d1a;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(34, 139, 34, 0.4);
+}
+
+.table {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+.table thead th {
+    background-color: var(--light-blue);
+    color: var(--primary-blue);
+    font-weight: 700;
+    border-color: #e0e0e0;
+    padding: 13px 15px;
+    text-align: left;
+    border-bottom: 2px solid var(--primary-blue);
+}
+.table td, .table th {
+    border: 1px solid #e0e0e0;
+    vertical-align: middle;
+    padding: 11px 12px;
+}
+.table td:first-child, .table th:first-child { border-left: none; }
+.table td:last-child, .table th:last-child { border-right: none; }
+.table tr td { border-top: none; border-bottom: 1px solid #e0e0e0; }
+.table tr:last-child td { border-bottom: none; }
+
+.table tbody tr {
+    transition: all 0.3s ease;
+}
+.table tbody tr:hover {
+    background-color: var(--light-yellow);
+}
+.table input[type="text"].form-control { /* Inputs within table cells */
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    margin-bottom: 0; /* Remove bottom margin for in-table inputs */
+}
+
+.table .action-buttons-group { /* Wrapper for action buttons */
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.table .action-buttons-group form { /* Reset form styles for inline action buttons */
+    margin: 0; padding: 0; box-shadow: none; background: none; border-radius: 0;
+}
+
+
+.table .btn-success.btn-sm { /* Save button in table */
+    background-color: #007bff;
+    border-color: #007bff;
+    color: var(--white);
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    border-radius: 7px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+}
+.table .btn-success.btn-sm:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.table .btn-danger.btn-sm { /* Delete button in table */
+    background-color: var(--secondary-red);
+    border-color: var(--secondary-red);
+    color: var(--white);
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    border-radius: 7px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255, 0, 0, 0.2);
+}
+.table .btn-danger.btn-sm:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+
+.alert-success { /* Bootstrap alert */
+    background-color: var(--status-enrolled-bg);
+    color: var(--status-enrolled-text);
+    border-color: var(--status-enrolled-dot);
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 12px 18px;
+}
+.btn-close { /* Bootstrap close button for alerts */
+    filter: invert(40%) sepia(10%) saturate(1000%) hue-rotate(100deg) brightness(90%) contrast(90%); /* Basic theming for close button */
+}
+
+
+.back-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-back {
+  display: inline-block;
+  background-color: var(--dark-gray);
+  color: var(--white);
+  padding: 11px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-back:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}

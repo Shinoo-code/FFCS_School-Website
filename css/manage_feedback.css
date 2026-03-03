@@ -1,0 +1,238 @@
+/* School Website 1/css/manage_feedback.css */
+:root {
+    --primary-blue: #0000CD;
+    --secondary-red: #FF0000; /* For delete/unapprove */
+    --accent-yellow: #FFD700;
+    --accent-green: #228B22; /* For approve */
+    --white: #FFFFFF;
+    --light-blue: #E6E6FF; /* Table header */
+    --light-yellow: #FFFBE6; /* Row hover */
+    --gray: #f5f5f5; /* Page background */
+    --dark-gray: #444;
+    --medium-gray: #ddd;
+    --status-approved-bg: #e6f7f0;
+    --status-approved-text: #155724;
+    --status-pending-bg: #fff8e1; /* Light yellow for pending */
+    --status-pending-text: #a05200; /* Darker yellow for pending text */
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+  font-family: 'Poppins';
+  background-color: var(--gray);
+  padding: 20px;
+  color: var(--dark-gray);
+  margin: 0;
+}
+
+.page-container {
+  max-width: 1100px; /* Wider for table content */
+  margin: 20px auto;
+  background-color: var(--white);
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.page-container:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+h2.page-title {
+  text-align: center;
+  color: var(--primary-blue);
+  font-size: 1.95rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  position: relative;
+  padding-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+h2.page-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 4px;
+    background-color: var(--accent-yellow);
+    border-radius: 2px;
+}
+
+.alert-success, .alert-danger {
+    border-radius: 8px;
+    font-weight: 700;
+    padding: 13px 18px;
+    margin-bottom: 22px;
+    text-align: center;
+}
+.alert-success {
+    background-color: var(--status-approved-bg);
+    color: var(--status-approved-text);
+    border: 1px solid var(--accent-green);
+}
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+
+.table-responsive {
+    margin-top: 20px;
+}
+
+.feedback-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  font-size: 0.9rem;
+}
+
+.feedback-table th, .feedback-table td {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 12px 13px;
+  text-align: left;
+  vertical-align: middle;
+}
+.feedback-table th:first-child, .feedback-table td:first-child { padding-left: 16px; }
+.feedback-table th:last-child, .feedback-table td:last-child { padding-right: 16px; text-align: center; }
+
+
+.feedback-table thead th {
+  background-color: var(--light-blue);
+  color: var(--primary-blue);
+  font-weight: 700;
+  border-top: none;
+  border-bottom: 2px solid #bfdbfe;
+}
+.feedback-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+.feedback-table tbody tr:hover {
+  background-color: var(--light-yellow);
+}
+.feedback-table tr:last-child td {
+    border-bottom: none;
+}
+
+.profile-image-sm {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--medium-gray);
+}
+.profile-placeholder-sm i {
+    font-size: 30px;
+    color: var(--medium-gray);
+}
+
+.rating-display .fa-star {
+    font-size: 0.9em;
+}
+.rating-display .text-warning {
+    color: var(--accent-yellow) !important;
+}
+.rating-display .text-muted {
+    color: var(--medium-gray) !important;
+}
+
+.status-label {
+    padding: 6px 11px;
+    font-size: 0.8em;
+    font-weight: 700;
+    border-radius: 12px;
+    text-transform: capitalize;
+    display: inline-block;
+}
+.status-approved {
+    background-color: var(--status-approved-bg);
+    color: var(--status-approved-text);
+}
+.status-pending {
+    background-color: var(--status-pending-bg);
+    color: var(--status-pending-text);
+}
+
+.action-buttons-group {
+    display: flex;
+    gap: 7px;
+    justify-content: center; /* Center buttons in the cell */
+}
+.action-buttons-group .btn {
+    font-size: 0.8rem;
+    padding: 7px 12px;
+    font-weight: 700;
+    border-radius: 7px;
+    transition: all 0.2s ease;
+}
+.btn-approve {
+    background-color: var(--accent-green);
+    color: var(--white);
+    border: none;
+    box-shadow: 0 2px 6px rgba(34, 139, 34, 0.2);
+}
+.btn-approve:hover {
+    background-color: #1a6d1a;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(34, 139, 34, 0.3);
+}
+.btn-unapprove {
+    background-color: #ffc107; /* Bootstrap warning yellow */
+    color: var(--dark-gray);
+    border: none;
+    box-shadow: 0 2px 6px rgba(255, 193, 7, 0.2);
+}
+.btn-unapprove:hover {
+    background-color: #e0a800;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(255, 193, 7, 0.3);
+}
+
+.btn-delete {
+  background-color: var(--secondary-red);
+  color: var(--white);
+  border: none;
+  box-shadow: 0 2px 6px rgba(255, 0, 0, 0.2);
+  border-radius: 7px;
+  transition: all 0.2s ease;
+}
+.btn-delete:hover {
+  background-color: #c82333;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(255, 0, 0, 0.3);
+}
+
+.back-container {
+  text-align: center;
+  margin-top: 32px;
+}
+.btn-back {
+  display: inline-block;
+  background-color: var(--dark-gray);
+  color: var(--white);
+  padding: 11px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.btn-back:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  color: var(--white);
+}
+.btn-back i { margin-right: 8px; }
