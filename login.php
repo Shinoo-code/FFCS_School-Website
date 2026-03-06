@@ -23,7 +23,7 @@ $error_message = $_GET['error'] ?? '';
                 </div>
             <div class="login-body">
                 <div class="logo-container">
-                    <img src="FFCS Pics/logo_monte_cristo.jpg" alt="FFCS Logo" class="logo">
+                    <img src="FFCS Pics/FFCS_Logo(clean).png" alt="FFCS Logo" class="logo">
                     <div class="school-name">Faith Family Christian School</div>
                 </div>
                 

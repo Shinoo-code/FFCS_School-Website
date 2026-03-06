@@ -1,7 +1,7 @@
 /* css/login.css - Responsive Update */
 
 :root {
-    --primary-blue: #0000CD; /* MediumBlue */
+    --primary-blue: #6e0977; /* Dark Purple */
     --secondary-red: #D9363E; /* A slightly softer red for the button */
     --accent-yellow: #FFD700; /* Gold */
     --white: #FFFFFF;
@@ -312,7 +312,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem; /* Consistent padding */
-    background-color: var(--primary-blue, #0000CD); /* Using primary blue from dashboard/login */
+    background-color: var(--primary-blue, #6e0977); /* Using primary blue from dashboard/login */
     color: var(--white, #FFFFFF);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
