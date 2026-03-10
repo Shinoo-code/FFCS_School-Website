@@ -42,7 +42,7 @@ $contactStmt = $pdo->query("SELECT * FROM contact_info");
 <section class="contact-us-section py-5 position-relative" data-aos="fade-down">
   <div class="container">
     <h2 class="text-center mb-5">Contact us</h2>
-    < class="row justify-content-center g-4 align-items-stretch">
+    <div class="row justify-content-center g-4 align-items-stretch">
     <?php while ($row = $contactStmt->fetch()): ?>
       <div class="col-md-4 d-flex">
         <div class="info-box w-100">

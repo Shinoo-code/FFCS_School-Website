@@ -231,7 +231,7 @@ body {
     bottom: 20px; /* Adjusted position */
     right: 20px;  /* Adjusted position */
     z-index: 1030; /* Ensure it's above most elements */
-    background-color: #001133; /* Slightly darker green than footer */
+    background-color: #6e0977; /* Darker green than footer */
     color: white;
     border: none;
     outline: none;
@@ -273,7 +273,7 @@ body {
 
 /* =============== CHATBOT STYLES =============== */
 :root {
-    --chatbot-primary: #016897; /* Main blue from your site */
+    --chatbot-primary: #6e0977; /* Main Purple for your site */
     --chatbot-secondary: #f0f4f8;
     --chatbot-bg: #ffffff;
     --chatbot-text: #333;
@@ -304,7 +304,7 @@ body {
 
 #chatbot-toggle:hover {
     transform: scale(1.1);
-    background-color: #01587f; /* Darker blue */
+    background-color:#e366ee; /* Darker blue */
 }
 
 #chatbot-toggle .bi-x-lg {

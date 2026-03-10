@@ -286,7 +286,7 @@ html {
 .welcome-block-exact {
   display: flex;
   align-items: center; /* Vertically center image and text content relative to each other */
-  background-color: #016897; /* The prominent yellow background from the "Kinderly" image */
+  background-color: #6e0977; /* The prominent yellow background from the "Kinderly" image */
   border-radius: 30px;     /* Rounded corners for the yellow block */
   padding: 30px 40px;      /* Padding inside the yellow block */
   position: relative;      /* For positioning the icon */
