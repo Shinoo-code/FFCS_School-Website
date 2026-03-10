@@ -133,4 +133,4 @@ send_response:
 ob_clean(); // Discard ALL buffered output (this is the CRITICAL fix)
 echo json_encode($response);
 exit; 
-// -----------------------------------------------------
+// -----------------------------------------------------    

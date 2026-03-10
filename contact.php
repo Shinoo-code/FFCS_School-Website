@@ -12,7 +12,7 @@
 <body>
 <nav class="navbar navbar-expand-lg">
   <div class="container"> <a class="navbar-brand" href="index.php">
-  <img src="FFCS Pics/logo_monte_cristo.jpg" alt="Monte Cristo Logo">
+  <img src="FFCS Pics/FFCS_Logo(clean).png" alt="Monte Cristo Logo">
 </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavContent" aria-controls="navbarNavContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -42,17 +42,17 @@ $contactStmt = $pdo->query("SELECT * FROM contact_info");
 <section class="contact-us-section py-5 position-relative" data-aos="fade-down">
   <div class="container">
     <h2 class="text-center mb-5">Contact us</h2>
-    <div class="row justify-content-center g-4">
-      <?php while ($row = $contactStmt->fetch()): ?>
-        <div class="col-md-4">
-          <div class="info-box">
-            <i class="<?= htmlspecialchars($row['icon_class']) ?>"></i>
-            <h5 class="fw-bold"><?= htmlspecialchars($row['label']) ?></h5>
-            <p><?= nl2br(htmlspecialchars($row['value'])) ?></p>
-          </div>
+    < class="row justify-content-center g-4 align-items-stretch">
+    <?php while ($row = $contactStmt->fetch()): ?>
+      <div class="col-md-4 d-flex">
+        <div class="info-box w-100">
+          <i class="<?= htmlspecialchars($row['icon_class']) ?>"></i>
+          <h5 class="fw-bold"><?= htmlspecialchars($row['label']) ?></h5>
+          <p class="mb-0"><?= nl2br(htmlspecialchars($row['value'])) ?></p>
         </div>
-      <?php endwhile; ?>
-    </div>
+      </div>
+    <?php endwhile; ?>
+  </div>
   </div>
 </section>
 

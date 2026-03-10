@@ -43,11 +43,11 @@ body {
 }
 
 .enrollment-container {
-    background-color: var(--kinderly-light-accent-bg); 
+    background-color: var(--kinderly-border-color);
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(197, 63, 164, 0.05);
     padding: 30px 40px;
-    border: 1px solid var(--kinderly-border-color);
+    border: 1px solid #6e0977;
     position: relative;
     overflow: hidden;
 }
@@ -236,7 +236,7 @@ textarea {
 }
 
 .submit-button:hover {
-    background-color: #016897;
+    background-color: #6e0977;
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(1, 39, 97, 0.3);
 }

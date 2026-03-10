@@ -24,7 +24,7 @@
   <!-- Navbar -->
 <nav class="navbar navbar-expand-lg">
   <div class="container"> <a class="navbar-brand" href="index.php">
-  <img src="FFCS Pics/logo_monte_cristo.jpg" alt="Monte Cristo Logo">
+  <img src="FFCS Pics/FFCS_Logo(clean).png" alt="Monte Cristo Logo">
 </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavContent" aria-controls="navbarNavContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

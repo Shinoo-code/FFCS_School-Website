@@ -16,8 +16,8 @@ html {
     }
     .btn-outline-dark {
         background-color: #fff;
-      border: 1px solid #001f54;
-      color: #001f54;
+      border: 1px solid #6e0977;
+      color: #6e0977;
       font-size: 0.9rem;
       padding: 6px 14px;
       border-radius: 6px;
@@ -34,7 +34,7 @@ html {
     }
 
     .card-style {
-      background: #016897;
+      background: #6e0977;
       border: 2px solid #d0d9e8;
       padding: 2rem;
       border-radius: 15px;
@@ -58,7 +58,7 @@ html {
 
 
     .highlight-section {
-      background-color: #016897;
+      background-color: #6e0977;
       padding: 3rem 0;
       border-radius: 80px 80px 0 0;
       position: relative;
