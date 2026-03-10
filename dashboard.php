@@ -400,7 +400,7 @@ if (isset($_GET['action'])) {
                     <i class="fas fa-chevron-right submenu-arrow"></i>
                 </a>
                 <ul class="submenu">
-                    <li class="nav-item"><a class="nav-link" href="manage_users.php">User Management</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../admin/manage_users.php">User Management</a></li>
                 </ul>
             </li>
 
@@ -410,18 +410,18 @@ if (isset($_GET['action'])) {
                     <i class="fas fa-chevron-right submenu-arrow"></i>
                 </a>
                 <ul class="submenu">
-                    <li class="nav-item"><a class="nav-link" href="manage_payments.php">Payment Management</a></li>
-                    <li class="nav-item"><a class="nav-link" href="manage_notifications.php">Notification Logs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/manage_payments.php">Payment Management</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/manage_notifications.php">Notification Logs</a></li>
                     <li class="nav-item has-submenu"> <a class="nav-link submenu-toggle">
                             <span class="nav-icon"><i class="fas fa-spinner"></i></span> 
                             <span class="nav-text">Loading</span> 
                             <i class="fas fa-chevron-right submenu-arrow"></i>
                         </a>
                         <ul class="submenu">
-                            <li class="nav-item"><a class="nav-link" href="manage_sections.php">Section & Subjects</a></li>
-                            <li class="nav-item"><a class="nav-link" href="manage_teachers.php">Manage Teachers</a></li>
-                            <li class="nav-item"><a class="nav-link" href="manage_schedules.php">Manage Schedules</a></li>
-                            <li class="nav-item"><a class="nav-link" href="manage_time_slots.php">Manage Time Slots</a></li>
+                            <li class="nav-item"><a class="nav-link" href="admin/manage_sections.php">Section & Subjects</a></li>
+                            <li class="nav-item"><a class="nav-link" href="admin/manage_teachers.php">Manage Teachers</a></li>
+                            <li class="nav-item"><a class="nav-link" href="admin/manage_schedules.php">Manage Schedules</a></li>
+                            <li class="nav-item"><a class="nav-link" href="admin/manage_time_slots.php">Manage Time Slots</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -435,11 +435,11 @@ if (isset($_GET['action'])) {
                 </a>
                 <ul class="submenu">
                     
-                    <li class="nav-item"><a class="nav-link" href="enrollment_history.php">Enrollment History</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/enrollment_history.php">Enrollment History</a></li>
                 </ul>
             </li>
             
-            <li class="nav-item"> <a class="nav-link" href="manage_analytics.php">
+            <li class="nav-item"> <a class="nav-link" href="admin/manage_analytics.php">
                     <span class="nav-icon"><i class="fas fa-chart-line"></i></span>
                     <span class="nav-text">Enrollment Analytics</span>
                 </a>
@@ -452,14 +452,14 @@ if (isset($_GET['action'])) {
                     <i class="fas fa-chevron-right submenu-arrow"></i>
                 </a>
                 <ul class="submenu">
-                    <li class="nav-item"><a class="nav-link" href="manage_hero.php">Manage Hero Section</a></li>
-                    <li class="nav-item"><a class="nav-link" href="manage_welcome.php">Manage Welcome Section</a></li>
-                    <li class="nav-item"><a class="nav-link" href="manage_enrollment_form.php">Manage Enrollment Form</a></li>
-                    <li class="nav-item"><a class="nav-link" href="edit_mission_vision.php">Manage Mission/Vision</a></li>
-                    <li class="nav-item"><a class="nav-link" href="manage_learning_paths.php">Manage Learning Paths</a></li>
-                    <li class="nav-item"><a class="nav-link" href="manage_programs.php">Manage Programs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="manage_news.php">Manage News & Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="edit_contact_info.php">Manage Contact Info</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/manage_hero.php">Manage Hero Section</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/manage_welcome.php">Manage Welcome Section</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/manage_enrollment_form.php">Manage Enrollment Form</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/edit_mission_vision.php">Manage Mission/Vision</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/manage_learning_paths.php">Manage Learning Paths</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/manage_programs.php">Manage Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/manage_news.php">Manage News & Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/edit_contact_info.php">Manage Contact Info</a></li>
                 </ul>
             </li>
 
@@ -469,8 +469,8 @@ if (isset($_GET['action'])) {
                     <i class="fas fa-chevron-right submenu-arrow"></i>
                 </a>
                 <ul class="submenu">
-                    <li class="nav-item"><a class="nav-link" href="manage_activities.php">Manage Activities</a></li>
-                    <li class="nav-item"><a class="nav-link" href="manage_categories.php">Manage Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/manage_activities.php">Manage Activities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/manage_categories.php">Manage Categories</a></li>
                 </ul>
             </li>
 
@@ -480,9 +480,9 @@ if (isset($_GET['action'])) {
                     <i class="fas fa-chevron-right submenu-arrow"></i>
                 </a>
                 <ul class="submenu">
-                    <li class="nav-item"><a class="nav-link" href="manage_feedback.php">Feedbacks</a></li>
-                    <li class="nav-item"><a class="nav-link" href="manage_announcements.php">Announcements</a></li>
-                    <li class="nav-item"><a class="nav-link" href="manage_faqs.php">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/manage_feedback.php">Feedbacks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/manage_announcements.php">Announcements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/manage_faqs.php">FAQs</a></li>
                 </ul>
             </li>
 
