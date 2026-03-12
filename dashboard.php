@@ -400,7 +400,7 @@ if (isset($_GET['action'])) {
                     <i class="fas fa-chevron-right submenu-arrow"></i>
                 </a>
                 <ul class="submenu">
-                    <li class="nav-item"><a class="nav-link" href="../admin/manage_users.php">User Management</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/manage_users.php">User Management</a></li>
                 </ul>
             </li>
 
