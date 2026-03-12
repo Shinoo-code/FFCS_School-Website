@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../api/session.php';
+require_once __DIR__ . '/../api/csrf.php';
 require '../api/db_connect.php';
 
 // Admin Check
@@ -75,6 +76,7 @@ $error_message = $_GET['error'] ?? '';
             </div>
             
             <input type="hidden" name="role" value="admin">
+            <input type="hidden" id="csrf-token" value="<?= csrf_token() ?>">
 
             <button type="submit" class="btn-submit-user"><i class="fas fa-plus-circle"></i> Create Account</button>
         </form>
@@ -147,9 +149,13 @@ document.addEventListener('DOMContentLoaded', function () {
             const userEmail = this.dataset.email;
 
             if (confirm(`Are you sure you want to delete the user: ${userEmail} (ID: ${userId})? This action cannot be undone.`)) {
+                const csrfToken = document.getElementById('csrf-token').value;
                 fetch('../api/auth/delete_user.php', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': csrfToken
+                    },
                     body: JSON.stringify({ id: userId })
                 })
                 .then(response => response.json())
