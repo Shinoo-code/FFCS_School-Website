@@ -1,12 +1,12 @@
 /* css/dashboard.css - Final Attempt */
 html {
-    font-size: 100%;
+    font-size: 112.5%;
 }
 :root {
-    --primary-blue: #0000CD;
-    --secondary-red: #FF0000;
-    --accent-yellow: #FFD700;
-    --accent-green: #228B22;
+    --primary-blue: #6e0977;
+    --secondary-red: #6e0977;
+    --accent-yellow: #a86eb8;
+    --accent-green: #6e0977;
     --white: #FFFFFF;
     --light-blue: #E6E6FF;
     --light-yellow: #FFFBE6;

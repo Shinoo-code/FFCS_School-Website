@@ -2,11 +2,11 @@
 :root {
     --kinderly-bg-light: #fffdf8;
     --kinderly-text-dark: #001133;
-    --kinderly-green-primary: #00b44f;
-    --kinderly-green-secondary: #00c853;
-    --kinderly-yellow-primary: #ffd24c;
-    --kinderly-pink-red-primary: #ff7f7f;
-    --kinderly-blue-accent: #001f54;
+    --kinderly-green-primary: #6e0977;
+    --kinderly-green-secondary: #6e0977;
+    --kinderly-yellow-primary: #a86eb8;
+    --kinderly-pink-red-primary: #6e0977;
+    --kinderly-blue-accent: #6e0977;
     --kinderly-text-white: #FFFFFF;
     --kinderly-border-soft: #d0d9e8;
     --kinderly-input-bg: #f7fbff;
@@ -16,7 +16,7 @@
 }
 
 html {
-    font-size: 100%;
+    font-size: 112.5%;
 }
 
 body.quiz-page-body {

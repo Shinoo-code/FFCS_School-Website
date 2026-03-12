@@ -23,7 +23,7 @@
   <nav class="navbar navbar-expand-lg">
       <div class="container">
           <a class="navbar-brand" href="index.php">
-              <img src="FFCS Pics/FFCS_Logo(clean).png" alt="Monte Cristo Logo">
+              <img src="FFCS Pics/FFCS_Logo(clean).png" alt="FFCS Logo">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavContent" aria-controls="navbarNavContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -304,7 +304,7 @@
 </div>
 
  <div class="container py-5" data-aos="fade-up">
-    <h2 class="fw-bold text-center mb-4" style="color: #00264d;">
+    <h2 class="fw-bold text-center mb-4" style="color: #000000;">
         📖 Frequently Asked Questions
     </h2>
     <div class="accordion accordion-flush" id="faqAccordion">

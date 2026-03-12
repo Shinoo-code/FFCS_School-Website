@@ -1,21 +1,21 @@
 /* Refined: School Website 1/css/manage_announcements.css */
 :root {
-    --primary-blue: #0000CD;
-    --secondary-red: #FF0000;
-    --accent-yellow: #FFD700;
-    --accent-green: #228B22;
+    --primary-blue: #6e0977;
+    --secondary-red: #6e0977;
+    --accent-yellow: #a86eb8;
+    --accent-green: #6e0977;
     --white: #FFFFFF;
-    --light-blue: #E6E6FF;
+    --light-blue: #e8d5f2;
     --light-yellow: #FFFBE6;
     --gray: #f5f5f5;
     --dark-gray: #444;
     --medium-gray: #ddd;
-    --status-enrolled-bg: #e6f7f0;
-    --status-enrolled-text: #155724;
-    --status-enrolled-dot: #28a745;
-    --status-declined-bg: #f8d7da; /* For error alerts if needed */
-    --status-declined-text: #721c24;
-    --status-declined-dot: #dc3545;
+    --status-enrolled-bg: #e8d5f2;
+    --status-enrolled-text: #4a0055;
+    --status-enrolled-dot: #6e0977;
+    --status-declined-bg: #e8d5f2; /* For error alerts if needed */
+    --status-declined-text: #4a0055;
+    --status-declined-dot: #6e0977;
 }
 
 html {

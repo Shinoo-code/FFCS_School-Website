@@ -1,15 +1,15 @@
 /* Refined: School Website 1/css/edit_contact_info.css */
 :root {
-    --primary-blue: #0000CD;
-    --accent-yellow: #FFD700;
-    --accent-green: #228B22;
+    --primary-blue: #6e0977;
+    --accent-yellow: #a86eb8;
+    --accent-green: #6e0977;
     --white: #FFFFFF;
     --gray: #f5f5f5;
     --dark-gray: #444;
     --medium-gray: #ddd;
-    --status-enrolled-bg: #e6f7f0;
-    --status-enrolled-text: #155724;
-    --status-enrolled-dot: #28a745;
+    --status-enrolled-bg: #e8d5f2;
+    --status-enrolled-text: #4a0055;
+    --status-enrolled-dot: #6e0977;
 }
 
 html {

@@ -1,5 +1,5 @@
 html {
-    font-size: 100%; /* Base font size increased */
+    font-size: 112.5%; /* Base font size increased */
 }    
 
 .navbar-brand img {
@@ -101,11 +101,11 @@ html {
       font-size: 1.5rem;
     }
 
-    .icon1 { top: 60px; left: 30px; color: #00c66b; font-size: 1.5rem; }
-    .icon2 { top: 120px; right: 40px; color: #ff6666; font-size: 1.8rem; }
-    .icon3 { top: 250px; left: 50%; transform: translateX(-50%); color: #fca503; font-size: 2rem; }
-    .icon4 { bottom: 130px; left: 60px; color: #6495ed; font-size: 1.6rem; }
-    .icon5 { bottom: 40px; right: 90px; color: #ffb347; font-size: 1.7rem; }
+    .icon1 { top: 60px; left: 30px; color: #6e0977; font-size: 1.5rem; }
+    .icon2 { top: 120px; right: 40px; color: #6e0977; font-size: 1.8rem; }
+    .icon3 { top: 250px; left: 50%; transform: translateX(-50%); color: #a86eb8; font-size: 2rem; }
+    .icon4 { bottom: 130px; left: 60px; color: #6e0977; font-size: 1.6rem; }
+    .icon5 { bottom: 40px; right: 90px; color: #6e0977; font-size: 1.7rem; }
 
     @keyframes float {
       0%, 100% { transform: translateY(0); }

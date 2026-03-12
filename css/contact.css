@@ -20,8 +20,8 @@ html {
 
     .btn-outline-dark {
         background-color: #fff;
-      border: 1px solid #001f54;
-      color: #001f54;
+      border: 1px solid #6e0977;
+      color: #6e0977;
       font-size: 0.9rem;
       padding: 6px 14px;
       border-radius: 6px;
@@ -45,7 +45,7 @@ html {
       overflow-wrap: break-word;
     }
     .text-center{
-      color: rgb(116, 27, 116);
+      color: rgb(110, 9, 119);
     }
     .info-box i {
       background: #6e0977;

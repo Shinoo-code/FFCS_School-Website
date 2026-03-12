@@ -6,28 +6,28 @@ html {
     --kinderly-bg-light: #fffdf8;
     --kinderly-text-dark: #001133;
     --kinderly-text-dark-alt: #0a0a23;
-    --kinderly-green-primary: #016897;
-    --kinderly-green-secondary: #016897;
-    --kinderly-yellow-primary: #ffd24c;
-    --kinderly-pink-red-primary: #ff7f7f;
-    --kinderly-blue-accent: #001f54;
+    --kinderly-green-primary: #6e0977;
+    --kinderly-green-secondary: #6e0977;
+    --kinderly-yellow-primary: #a86eb8;
+    --kinderly-pink-red-primary: #6e0977;
+    --kinderly-blue-accent: #6e0977;
     --kinderly-text-white: #FFFFFF;
     --kinderly-border-soft: #d0d9e8;
     --kinderly-input-bg: #f7fbff;
     --kinderly-text-muted: #555555;
     --kinderly-shadow-soft: rgba(0, 0, 0, 0.05);
 
-    --kinderly-status-approved-bg: #e6f4ea;
-    --kinderly-status-approved-dot: #1e8e3e;
-    --kinderly-status-approved-text: #0d652d;
+    --kinderly-status-approved-bg: #e8d5f2;
+    --kinderly-status-approved-dot: #6e0977;
+    --kinderly-status-approved-text: #4a0055;
 
-    --kinderly-status-pending-bg: #fff8e1;
-    --kinderly-status-pending-dot: #e57300;
-    --kinderly-status-pending-text: #a05200;
+    --kinderly-status-pending-bg: #e8d5f2;
+    --kinderly-status-pending-dot: #6e0977;
+    --kinderly-status-pending-text: #4a0055;
 
-    --kinderly-status-declined-bg: #fdecea;
-    --kinderly-status-declined-dot: #c73939;
-    --kinderly-status-declined-text: #a12d2d;
+    --kinderly-status-declined-bg: #e8d5f2;
+    --kinderly-status-declined-dot: #6e0977;
+    --kinderly-status-declined-text: #4a0055;
 
     --kinderly-info-bg: #e9f5ff;
     --kinderly-info-text: #004085;

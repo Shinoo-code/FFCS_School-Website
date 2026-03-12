@@ -98,11 +98,11 @@ try {
                             <td>
                                 <div class="action-buttons-group">
                                     <?php if ($fb['is_approved']): ?>
-                                        <a href="api/feedback/update_feedback_status.php?id=<?= $fb['id'] ?>&action=unapprove" class="btn btn-sm btn-unapprove" title="Unapprove Feedback"><i class="fas fa-times-circle"></i> Disapprove</a>
+                                        <a href="../api/feedback/update_feedback_status.php?id=<?= $fb['id'] ?>&action=unapprove" class="btn btn-sm btn-unapprove" title="Unapprove Feedback"><i class="fas fa-times-circle"></i> Disapprove</a>
                                     <?php else: ?>
-                                        <a href="api/feedback/update_feedback_status.php?id=<?= $fb['id'] ?>&action=approve" class="btn btn-sm btn-approve" title="Approve Feedback"><i class="fas fa-check-circle"></i> Approve</a>
+                                        <a href="../api/feedback/update_feedback_status.php?id=<?= $fb['id'] ?>&action=approve" class="btn btn-sm btn-approve" title="Approve Feedback"><i class="fas fa-check-circle"></i> Approve</a>
                                     <?php endif; ?>
-                                    <a href="api/feedback/delete_feedback.php?id=<?= $fb['id'] ?>" class="btn btn-sm btn-delete" title="Delete Feedback" onclick="return confirm('Are you sure you want to delete this feedback? This cannot be undone.');"><i class="fas fa-trash-alt"></i> Delete</a>
+                                    <a href="../api/feedback/delete_feedback.php?id=<?= $fb['id'] ?>" class="btn btn-sm btn-delete" title="Delete Feedback" onclick="return confirm('Are you sure you want to delete this feedback? This cannot be undone.');"><i class="fas fa-trash-alt"></i> Delete</a>
                                 </div>
                             </td>
                         </tr>
