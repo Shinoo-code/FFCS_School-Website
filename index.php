@@ -154,7 +154,7 @@
   </div> <div class="section-peach">
     <div class="scroll-banner">
       <div class="scroll-text-wrapper">
-        <div class="scroll-text">
+        <div class="scroll-text">  
           ⭐ STUDENT SUCCESS! &nbsp; 🧩 FUN ACTIVITIES! &nbsp; 📖 ENROLL TODAY! &nbsp; 🎉 JOIN US! &nbsp; 🧠 GROW WITH US! &nbsp;
         </div>
         <div class="scroll-text">
