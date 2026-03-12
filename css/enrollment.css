@@ -1,15 +1,15 @@
 html {
-    font-size: 110%; /* Base font size increased */
+    font-size: 112.5%; /* Base font size increased */
 }
 
 :root {
     --kinderly-bg: #fffdf6;
     --kinderly-text: #0a0a23; 
-    --kinderly-primary-green: #016897;
-    --kinderly-accent-yellow: #c5e9fd; 
-    --kinderly-accent-pink: #ff7f7f;
-    --kinderly-form-highlight: #001f54; 
-    --kinderly-button-bg: #016897;
+    --kinderly-primary-green: #6e0977;
+    --kinderly-accent-yellow: #e8d5f2; 
+    --kinderly-accent-pink: #a86eb8;
+    --kinderly-form-highlight: #6e0977; 
+    --kinderly-button-bg: #6e0977;
     --kinderly-button-text: #ffffff;
     --kinderly-light-accent-bg: #f7fbff;
     --kinderly-border-color: #d0d9e8;

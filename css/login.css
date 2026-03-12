@@ -2,15 +2,15 @@
 
 :root {
     --primary-blue: #6e0977; /* Dark Purple */
-    --secondary-red: #D9363E; /* A slightly softer red for the button */
-    --accent-yellow: #FFD700; /* Gold */
+    --secondary-red: #6e0977; /* Purple */
+    --accent-yellow: #a86eb8; /* Light purple */
     --white: #FFFFFF;
     --light-gray-bg: #f0f2f5; /* Light background for the page */
     --text-dark: #333;
     --text-light: #555;
     --border-color: #ddd;
     --input-focus-border: var(--primary-blue);
-    --input-focus-shadow: rgba(0, 0, 205, 0.15);
+    --input-focus-shadow: rgba(110, 9, 119, 0.15);
     --error-bg: rgba(255, 0, 0, 0.05);
     --error-text: #D32F2F; /* Darker red for error text */
     --error-border: rgba(255, 0, 0, 0.3);
@@ -42,8 +42,8 @@ body {
     line-height: 1.6;
     /* Background pattern from the image */
     background-image: 
-        linear-gradient(rgba(0, 0, 205, 0.05) 1px, transparent 1px), 
-        linear-gradient(90deg, rgba(0, 0, 205, 0.05) 1px, transparent 1px);
+        linear-gradient(rgba(110, 9, 119, 0.05) 1px, transparent 1px), 
+        linear-gradient(90deg, rgba(110, 9, 119, 0.05) 1px, transparent 1px);
     background-size: 20px 20px; /* Size of the grid pattern */
 }
 

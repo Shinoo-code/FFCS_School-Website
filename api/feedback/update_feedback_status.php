@@ -6,7 +6,7 @@ require_once __DIR__ . '/../db_connect.php'; // Adjust path if necessary
 
 // Ensure only admins can perform this action
 if (!isset($_SESSION['faculty_id']) || !isset($_SESSION['faculty_role']) || $_SESSION['faculty_role'] !== 'admin') {
-    header("Location: ../../manage_feedback.php?error_message=" . urlencode("Unauthorized action."));
+    header("Location: ../../admin/manage_feedback.php?error_message=" . urlencode("Unauthorized action."));
     exit;
 }
 
@@ -29,23 +29,23 @@ if (isset($_GET['id']) && isset($_GET['action'])) {
             $stmt->execute();
 
             if ($stmt->rowCount() > 0) {
-                header("Location: ../../manage_feedback.php?success_message=" . urlencode("Feedback status updated successfully."));
+                header("Location: ../../admin/manage_feedback.php?success_message=" . urlencode("Feedback status updated successfully."));
             } else {
-                header("Location: ../../manage_feedback.php?error_message=" . urlencode("Feedback not found or status already set."));
+                header("Location: ../../admin/manage_feedback.php?error_message=" . urlencode("Feedback not found or status already set."));
             }
             exit;
 
         } catch (PDOException $e) {
             error_log("Error updating feedback status: " . $e->getMessage());
-            header("Location: ../../manage_feedback.php?error_message=" . urlencode("Database error updating status."));
+            header("Location: ../../admin/manage_feedback.php?error_message=" . urlencode("Database error updating status."));
             exit;
         }
     } else {
-        header("Location: ../../manage_feedback.php?error_message=" . urlencode("Invalid action or feedback ID."));
+        header("Location: ../../admin/manage_feedback.php?error_message=" . urlencode("Invalid action or feedback ID."));
         exit;
     }
 } else {
-    header("Location: ../../manage_feedback.php?error_message=" . urlencode("Missing parameters."));
+    header("Location: ../../admin/manage_feedback.php?error_message=" . urlencode("Missing parameters."));
     exit;
 }
 ?>

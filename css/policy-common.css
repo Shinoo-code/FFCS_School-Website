@@ -1,33 +1,33 @@
 /* policy-common.css - Ensure this is the version you intend to use */
 :root {
-    --kinderly-bg: #fffdf6; /* From enrollment.css */
-    --kinderly-text: #0a0a23; /* From enrollment.css */
-    --kinderly-primary-green: #00b44f; /* From enrollment.css */
-    --kinderly-accent-yellow: #ffc843; /* From enrollment.css */
-    --kinderly-form-highlight: #001f54; /* From enrollment.css */
-    --kinderly-button-bg: #00c853; /* From enrollment.css */
-    --kinderly-button-text: #ffffff; /* From enrollment.css */
-    --kinderly-light-accent-bg: #f7fbff; /* From enrollment.css */
-    --kinderly-border-color: #d0d9e8; /* From enrollment.css */
+    --kinderly-bg: #fffdf8; /* From index.css */
+    --kinderly-text: #001133; /* From index.css */
+    --kinderly-primary-green: #016897; /* Blue from index.css */
+    --kinderly-accent-yellow: #6e0977; /* Purple from index.css */
+    --kinderly-form-highlight: #001133; /* From index.css */
+    --kinderly-button-bg: #6e0977; /* Purple from index.css */
+    --kinderly-button-text: #ffffff; /* From index.css */
+    --kinderly-light-accent-bg: #fffdf8; /* From index.css */
+    --kinderly-border-color: #d0d9e8; /* Light border */
     --header-height: 0px; /* MODIFIED: Set to 0px as there's no fixed MAIN navbar */
 }
 
 html {
-    font-size: 100%; /* Base font size increased */
+    font-size: 112.5%; /* Base font size increased */
     scroll-behavior: smooth;
 }
 
 body { /* Removed padding-top as there's no fixed main navbar */
     font-family: 'Poppins';
-    background-color: var(--kinderly-bg, #fdfcf6);
-    color: var(--kinderly-text, #333);
+    background-color: #fffdf8; /* From index.css */
+    color: #001133; /* From index.css */
     line-height: 1.7;
     margin: 0;
     /* padding-top: var(--header-height); REMOVED THIS */
 }
 
 .policy-header { /* This is the colored header specific to policy pages */
-    background-color: var(--kinderly-primary-green, #00b44f);
+    background-color: #016897; /* Blue from index.css */
     color: var(--kinderly-button-text, white);
     padding: 3rem 1rem 3rem 1rem; /* Adjusted padding slightly */
     text-align: center;
@@ -44,7 +44,7 @@ body { /* Removed padding-top as there's no fixed main navbar */
     transform: translateX(-50%);
     width: 120%; /* Adjusted for visual effect */
     height: 80px;  /* Adjusted for visual effect */
-    background-color: var(--kinderly-bg, #fdfcf6);
+    background-color: #fffdf8; /* From index.css */
     border-radius: 50%;
     z-index: 0;
 }
@@ -70,7 +70,7 @@ body { /* Removed padding-top as there's no fixed main navbar */
     max-width: 850px; /* Readable width */
     margin: 0 auto 3rem auto;
     padding: 2.5rem; /* Increased padding */
-    background-color: var(--kinderly-light-accent-bg, #ffffff); /* Use a light bg or white */
+    background-color: #ffffff; /* White background */
     border-radius: 10px; /* Softer radius */
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07); /* Softer shadow */
     border: 1px solid var(--kinderly-border-color, #e0e0e0);
@@ -89,17 +89,17 @@ body { /* Removed padding-top as there's no fixed main navbar */
 }
 
 .policy-section h2 {
-    color: var(--kinderly-form-highlight, #001f54);
+    color: #001133; /* Dark text from index.css */
     font-size: 1.6rem; /* Adjusted size */
     font-weight: 600;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--kinderly-accent-yellow, #ffc843);
+    border-bottom: 2px solid #6e0977; /* Purple from index.css */
     display: inline-block;
 }
 
 .policy-section h3 {
-    color: var(--kinderly-primary-green, #00b44f);
+    color: #016897; /* Blue from index.css */
     font-size: 1.2rem; /* Adjusted size */
     font-weight: 600;
     margin-top: 1.5rem;
@@ -111,7 +111,8 @@ body { /* Removed padding-top as there's no fixed main navbar */
 .policy-section ol {
     margin-bottom: 1rem;
     font-size: 0.95rem; /* Standard text size */
-    color: var(--kinderly-text, #0a0a23); /* Main text color */
+    color: #001133; /* From index.css */
+    text-align: justify;
 }
 
 .policy-section ul,
@@ -125,18 +126,18 @@ body { /* Removed padding-top as there's no fixed main navbar */
 }
 
 .policy-section strong {
-    color: var(--kinderly-text, #0a0a23); /* Ensure strong stands out */
+    color: #001133; /* From index.css */
     font-weight: 600;
 }
 
 .policy-section a {
-    color: var(--kinderly-primary-green, #00b44f);
+    color: #016897; /* Blue from index.css */
     text-decoration: underline;
     font-weight: 500;
 }
 
 .policy-section a:hover {
-    color: var(--kinderly-form-highlight, #001f54); /* Darker on hover */
+    color: #6e0977; /* Purple from index.css */
 }
 
 .back-home-btn-container {
@@ -146,7 +147,7 @@ body { /* Removed padding-top as there's no fixed main navbar */
 }
 
 .btn-back-home {
-    background-color: var(--kinderly-button-bg, #00c853);
+    background-color: #6e0977; /* Purple from index.css */
     color: var(--kinderly-button-text, white);
     padding: 0.75rem 2rem;
     font-size: 1rem;
@@ -160,7 +161,7 @@ body { /* Removed padding-top as there's no fixed main navbar */
 }
 
 .btn-back-home:hover {
-    background-color: #00a040; /* Darker shade of kinderly-button-bg */
+    background-color: #5a0560; /* Darker shade of purple */
     color: var(--kinderly-button-text, white);
     transform: translateY(-2px);
 }

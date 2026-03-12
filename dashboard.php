@@ -370,7 +370,7 @@ if (isset($_GET['action'])) {
 <body>
   <div class="header">
     <div class="header-left">
-      <img src="FFCS Pics/logo_monte_cristo.jpg" alt="FFCS Logo" class="logo">
+      <img src="FFCS Pics/FFCS_Logo(clean).png" alt="FFCS Logo" class="logo">
       <div class="school-name">Faith Family Christian School</div>
     </div>
     <div class="header-right">

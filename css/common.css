@@ -47,7 +47,7 @@ body {
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-    color: #00b44f !important; /* Theme green for hover/active */
+    color: #6e0977 !important; /* Theme purple for hover/active */
 }
 
 /* Faculty Login Button styling (common across pages with this navbar) */
@@ -66,8 +66,8 @@ body {
 
 .navbar .btn-outline-dark:hover {
     color: #ffffff !important;
-    background-color: #001133 !important;
-    border-color: #001133 !important;
+    background-color: #6e0977 !important;
+    border-color: #6e0977 !important;
 }
 
 /* Centering navbar items - Bootstrap 5 approach often involves mx-auto on .navbar-nav */
@@ -145,11 +145,11 @@ body {
 
 /* Site Footer General Styling */
 .site-footer {
-    background-color: #001133; /* Green background from image */
+    background-color: #6e0977; /* Purple background */
     color: white;
     font-size: 14px; /* Base font size for footer */
     position: relative; /* For potential decorative elements */
-    border-top: 3px solid #ffffff; /* Optional: Yellow accent line */
+    border-top: 3px solid #ffffff; /* Optional: White accent line */
 }
 
 .site-footer .container {
@@ -208,7 +208,7 @@ body {
 }
 
 .site-footer .footer-links-list li a:hover {
-    color: #ffd24c; /* Yellow accent on hover */
+    color: #a86eb8; /* Light purple accent on hover */
     padding-left: 5px; /* Slight indent on hover */
 }
 

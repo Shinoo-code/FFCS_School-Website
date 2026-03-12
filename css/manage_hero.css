@@ -1,16 +1,16 @@
 /* Refined: School Website 1/css/manage_hero.css */
 :root {
-    --primary-blue: #0000CD;
-    --accent-yellow: #FFD700; /* This is used for the title underline */
-    --accent-green: #228B22;
+    --primary-blue: #6e0977;
+    --accent-yellow: #a86eb8; /* This is used for the title underline */
+    --accent-green: #6e0977;
     --white: #FFFFFF;
     --gray: #f5f5f5;
     --dark-gray: #444;
     --medium-gray: #ddd;
     /* Custom Success Alert Colors (matching your example) */
-    --custom-success-bg: #e6f7f0;    /* Light green background */
-    --custom-success-text: #155724;  /* Dark green text */
-    --custom-success-border: #c3e6cb; /* Greenish border */
+    --custom-success-bg: #e8d5f2;    /* Light purple background */
+    --custom-success-text: #4a0055;  /* Dark purple text */
+    --custom-success-border: #c3b5c8; /* Purple border */
 }
 
 html {

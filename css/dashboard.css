@@ -1,12 +1,12 @@
 /* css/dashboard.css - Final Attempt */
 html {
-    font-size: 100%;
+    font-size: 112.5%;
 }
 :root {
-    --primary-blue: #0000CD;
-    --secondary-red: #FF0000;
-    --accent-yellow: #FFD700;
-    --accent-green: #228B22;
+    --primary-blue: #6e0977;
+    --secondary-red: #6e0977;
+    --accent-yellow: #a86eb8;
+    --accent-green: #6e0977;
     --white: #FFFFFF;
     --light-blue: #E6E6FF;
     --light-yellow: #FFFBE6;
@@ -145,8 +145,8 @@ td .status-badge.status-unknown .status-dot { background-color: var(--status-unk
 .btn-secondary:hover { background-color: #5a6268; }
 .btn-success { background-color: var(--accent-green); color: white; }
 .btn-success:hover { background-color: #1a6d1a; }
-.btn-primary { background-color: #007bff; color: white; }
-.btn-primary:hover { background-color: #0056b3; }
+.btn-primary { background-color: #6e0977; color: white; }
+.btn-primary:hover { background-color: #5a0065; }
 
 /* --- Footer --- */
 .footer { background-color: var(--primary-blue); color: var(--white); text-align: center; padding: 15px; font-size: 0.9rem; margin-top: auto; flex-shrink: 0; }
