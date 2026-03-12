@@ -207,7 +207,7 @@ html {
 
     .learning-card h5 {
       font-weight: 700;
-      color: #001133;
+      color: #6e0977;
     }
     
     .learning-card p {
@@ -277,10 +277,8 @@ html {
 }
 /* Styles for the "Exactly Like This" Welcome Section */
 .section-welcome-area {
-  background-color: #FFFBEB; /* A very light yellow/off-white for the broader section background, matching the image */
+  background-color: #FFFBEB; 
   padding: 60px 0; /* Adjust overall section padding */
-  /* You might want to re-apply top rounded corners if this section replaces .section-yellow for that */
-  /* border-radius: 80px 80px 0 0; */
 }
 
 .welcome-block-exact {
@@ -500,7 +498,7 @@ html {
   width: 80px;
   height: 80px;
   object-fit: cover;
-  border: 3px solid var(--kinderly-primary-green, #00b44f);
+  border: 3px solid var(--kinderly-primary-green, #6e0977);
 }
 
 .feedback-profile-placeholder i {

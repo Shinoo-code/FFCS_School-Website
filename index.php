@@ -218,7 +218,7 @@
   <h2 class="fw-boldddd text-center mb-4">Our Activities</h2>
 
   <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
-    <button class="btn btn-sm rounded-pill px-3 py-1 fw-bold text-white" style="background-color:#016897;" onclick="filterCards('all')">All Activities</button>
+    <button class="btn btn-sm rounded-pill px-3 py-1 fw-bold text-white" style="background-color:#6e0977;" onclick="filterCards('all')">All Activities</button>
     <?php foreach ($categories as $cat): ?>
       <button class="btn btn-outline-secondary btn-sm rounded-pill px-3 py-1" onclick="filterCards('<?= htmlspecialchars($cat['slug'] ?? '') ?>')">
         <?= htmlspecialchars($cat['name'] ?? '') ?>
@@ -272,7 +272,7 @@
         </a>
     </div>
 </div>
-  <div class="container-fluid px-0" style="background-color:#016897; border-top-left-radius: 60px; border-top-right-radius: 60px;">
+  <div class="container-fluid px-0" style="background-color:#6e0977; border-top-left-radius: 60px; border-top-right-radius: 60px;">
   <div class="container py-5" data-aos="fade-zoom-in">
     <h2 class="fw-bold text-center mb-4">📢 Announcements</h2>
 
@@ -333,7 +333,7 @@
 </div>
 
 <div class="container py-5" data-aos="fade-up" id="parents-feedback-section">
-    <h2 class="fw-bold text-center mb-4" style="color: #00264d;">
+    <h2 class="fw-bold text-center mb-4" style="color: #000000;">
         💬 Parent's Feedback
     </h2>
 
