@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 
-$apiKey = 'AIzaSyCS7BhGs23asnWX57vP56X1QWWcVh4fKmY'; 
+$apiKey = 'AIzaSyBtPgfRnnJGnPq3dHoTFxaUF4C6V6Y08-I'; 
 
 $input = json_decode(file_get_contents('php://input'), true);
 $user_message = $input['message'] ?? '';
