@@ -39,7 +39,7 @@ html {
     body {
       font-family: 'Poppins';
       background-color: #fffdf8;
-      color: #001133;
+      color: #000000;
       position: relative;
       overflow-x: hidden;
     }
@@ -64,17 +64,17 @@ html {
     }
     .btn-custom {
       padding: 10px 20px;
-      border: 2px solid #001133;
+      border: 2px solid #6e0977;
       border-radius: 8px;
       font-weight: bold;
       background: none;
-      color: #001133;
+      color: #6e0977;
       transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
     }
     .btn-custom:not(.explore):hover { 
       color: #ffffff;
-      background-color: #001133; 
-      border-color: #001133;
+      background-color: #6e0977; 
+      border-color: #6e0977;
     }
     .btn-custom.explore {
       background-color: #6e0977;
@@ -86,11 +86,11 @@ html {
       font-weight: 900; /* Nunito Black */
       line-height: 1.2;
       margin-bottom: 1rem; /* Added some space below h1 */
-      color: #00264d; /* Dark blue from image */
+      color: #6e0977; /* Dark blue from image */
     }
 
     .hero-text h1 strong {
-      color: #00264d; /* Dark blue from image */
+      color: #6e0977; /* Dark blue from image */
       font-weight: 900; /* Ensure strong is also Nunito Black */
     }
 
@@ -162,7 +162,7 @@ html {
     }
 
     .section-peach {
-      background-color: #016897;
+      background-color: #6e0977;
       padding: 0;
       text-align: center;
       color: white;
@@ -171,7 +171,7 @@ html {
     }
 
     .section-yellow {
-      background-color: #016897;
+      background-color: #6e0977;
       border-radius: 80px 80px 0 0;
       padding: 60px 40px 120px;
       margin-top: 40px;
@@ -377,7 +377,7 @@ html {
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
   cursor: pointer;
   font-size: 1.6rem;
-  color: #016897;
+  color: #6e0977;
 }
 .announce-prev { left: 12px; }
 .announce-next { right: 12px; }
@@ -388,19 +388,6 @@ html {
   .announcement-item { width: calc(100% - 40px); }
   .announcements-carousel-container { padding: 10px 20px; }
 }
-
-
-/* Remove or adjust .section-yellow if it's no longer needed for this specific block */
-/*
-.section-yellow {
-  background-color: #ffd24c;
-  border-radius: 80px 80px 0 0;
-  padding: 60px 40px 120px;
-  margin-top: 40px;
-  position: relative;
-  z-index: 2;
-}
-*/
 
 /* Ensure .learning-paths still looks good */
 .learning-paths {
@@ -540,7 +527,7 @@ html {
 }
 
 .feedback-rating .text-warning { /* Star color */
-  color: var(--kinderly-accent-yellow, #4a99a7) !important;
+  color: var(--kinderly-accent-yellow, #fbff00) !important;
 }
 .feedback-rating .text-muted { /* Empty star color */
   color: #d0d9e8 !important;
