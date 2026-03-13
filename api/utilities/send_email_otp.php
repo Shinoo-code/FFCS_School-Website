@@ -27,8 +27,25 @@ function sendOtpEmail($recipientEmail, $otpCode) {
         $mail->SMTPAuth   = true;                                  
         $mail->Username   = $smtp_username;                        
         $mail->Password   = $smtp_password;                        
+        // Make SMTP connections fail faster in dev if the server is unreachable
+        // and avoid verbose debug output in production.
+        $mail->SMTPDebug = 0; // 0 = off (for production), 2 = client+server
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;           
-        $mail->Port       = 465;                                    
+        $mail->Port       = 465;                                   
+        // Reduce default timeouts so the login request doesn't hang for minutes
+        // when the SMTP server is unreachable. Adjust as needed.
+        $mail->Timeout = 10; // seconds for network operations
+        $mail->SMTPKeepAlive = false;
+        $mail->SMTPAutoTLS = false;
+        // Allow local dev environments with self-signed certs to proceed,
+        // but in production you should remove/adjust these options.
+        $mail->SMTPOptions = [
+            'ssl' => [
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true,
+            ],
+        ];
 
         //Recipients
         $mail->setFrom($smtp_username, $sender_name);
