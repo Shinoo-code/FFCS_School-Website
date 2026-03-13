@@ -30,7 +30,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavContent">
             <ul class="navbar-nav mx-auto">
-              <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+              <li class="nav-item"><a class="nav-link active" href="index.php">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
               <li class="nav-item"><a class="nav-link" href="programs.php">Programs</a></li>
               <li class="nav-item"><a class="nav-link" href="enrollment.php">Admissions</a></li>
@@ -303,26 +303,23 @@
   </div>
 </div>
 
- <div class="container py-5" data-aos="fade-up">
+<div class="container py-5" data-aos="fade-up">
     <h2 class="fw-bold text-center mb-4" style="color: #000000;">
         📖 Frequently Asked Questions
     </h2>
-    <div class="accordion accordion-flush" id="faqAccordion">
+    <div id="faqAccordion">
         <?php if (!empty($faqs)): ?>
             <?php foreach ($faqs as $index => $faq_item): ?>
-                <div class="accordion-item border rounded-4 mb-3">
-                    <h2 class="accordion-header" id="faqHeading<?= $index ?>">
-                        <button class="accordion-button collapsed rounded-4 fw-semibold" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#faqCollapse<?= $index ?>"
-                            aria-expanded="false" aria-controls="faqCollapse<?= $index ?>">
-                            <?= htmlspecialchars($faq_item["question"] ?? '') ?>
-                        </button>
-                    </h2>
-                    <div id="faqCollapse<?= $index ?>" class="accordion-collapse collapse"
-                         aria-labelledby="faqHeading<?= $index ?>" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body text-secondary">
-                            <?= nl2br(htmlspecialchars($faq_item["answer"] ?? '')) ?>
-                        </div>
+                <div class="border rounded-4 mb-3" style="overflow:hidden;">
+                    <button 
+                        class="faq-toggle w-100 text-start fw-semibold d-flex justify-content-betwees align-items-center"
+                        style="background:#f3e5f5; border:none; padding:1rem 1.25rem; color:#6e0977; cursor:pointer;"
+                        onclick="toggleFaq(this)">
+                        <?= htmlspecialchars($faq_item["question"] ?? '') ?>
+                        <span class="faq-icon" style="flex-shrink:0; margin-left:1rem; font-size:1.2rem;">▼</span>
+                    </button>
+                    <div class="faq-body" style="display:none; padding:1rem 1.25rem; color:#444; line-height:1.75;">
+                        <?= nl2br(htmlspecialchars($faq_item["answer"] ?? '')) ?>
                     </div>
                 </div>
             <?php endforeach; ?>
@@ -332,6 +329,27 @@
     </div>
 </div>
 
+<script>
+function toggleFaq(btn) {
+    const body = btn.nextElementSibling;
+    const icon = btn.querySelector('.faq-icon');
+    const isOpen = body.style.display === 'block';
+
+    // Close all others
+    document.querySelectorAll('.faq-body').forEach(b => b.style.display = 'none');
+    document.querySelectorAll('.faq-icon').forEach(i => i.textContent = '▼');
+    document.querySelectorAll('.faq-toggle').forEach(b => {
+        b.style.background = '#f3e5f5';
+        b.style.color = '#6e0977';
+    });
+
+    // Toggle clicked one
+    if (!isOpen) {
+        body.style.display = 'block';
+        icon.textContent = '▲';
+    }
+}
+</script>
 <div class="container py-5" data-aos="fade-up" id="parents-feedback-section">
     <h2 class="fw-bold text-center mb-4" style="color: #000000;">
         💬 Parent's Feedback

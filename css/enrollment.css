@@ -569,3 +569,57 @@ textarea.input-error {
         border-color: red !important;
         box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.15) !important;
     }
+
+
+    /* ============================================
+   SCROLL TO BOTTOM BUTTON
+   ============================================ */
+#scrollToBottomBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: #6e0977;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(110, 9, 119, 0.45);
+    transition: background-color 0.3s ease,
+                transform 0.2s ease,
+                box-shadow 0.3s ease,
+                opacity 0.3s ease;
+    opacity: 1;
+}
+
+#scrollToBottomBtn:hover {
+    background-color: #5a0763;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(110, 9, 119, 0.55);
+}
+
+#scrollToBottomBtn:active {
+    transform: translateY(0);
+}
+
+#scrollToBottomBtn svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+    animation: bounceDown 1.8s ease-in-out infinite;
+}
+
+@keyframes bounceDown {
+    0%, 100% { transform: translateY(0);   }
+    50%       { transform: translateY(5px); }
+}
+
+#scrollToBottomBtn.hidden {
+    opacity: 0;
+    pointer-events: none;
+}

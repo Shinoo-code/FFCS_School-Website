@@ -630,6 +630,44 @@ try {
     </div>
 </div>
 
+<!-- Scroll to Bottom / Back to Top Button -->
+<button id="scrollToBottomBtn" title="Scroll to bottom" aria-label="Scroll to bottom">
+    <svg id="scrollBtnIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+    </svg>
+</button>
+
+<script>
+    (function () {
+        const scrollBtn = document.getElementById('scrollToBottomBtn');
+        const scrollIcon = document.getElementById('scrollBtnIcon');
+
+        const arrowDown = 'M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z';
+        const arrowUp   = 'M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z';
+
+        function atBottom() {
+            return (window.innerHeight + window.scrollY) >= document.body.scrollHeight - 10;
+        }
+
+        function updateBtn() {
+            const bottom = atBottom();
+            scrollIcon.querySelector('path').setAttribute('d', bottom ? arrowUp : arrowDown);
+            scrollBtn.title = bottom ? 'Scroll to top' : 'Scroll to bottom';
+            scrollBtn.setAttribute('aria-label', bottom ? 'Scroll to top' : 'Scroll to bottom');
+        }
+
+        window.addEventListener('scroll', updateBtn, { passive: true });
+        updateBtn();
+
+        scrollBtn.addEventListener('click', function () {
+            if (atBottom()) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            }
+        });
+    })();
+</script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/enrollment.js"></script>

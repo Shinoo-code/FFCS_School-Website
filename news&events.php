@@ -36,7 +36,7 @@
         <li class="nav-item"><a class="nav-link" href="programs.php">Programs</a></li>
         <li class="nav-item"><a class="nav-link" href="enrollment.php">Admissions</a></li>
         <li class="nav-item"><a class="nav-link" href="results.php">Status</a></li>
-        <li class="nav-item"><a class="nav-link" href="news&events.php">News & Events</a></li>
+        <li class="nav-item"><a class="nav-link active" href="news&events.php">News & Events</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
       </ul>
       </div>
